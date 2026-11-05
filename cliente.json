@@ -409,7 +409,7 @@
     ]
    },
    {
-    "id": "toston-con-palta-queso-crema-jamon-crudo-y-cherr",
+    "id": "toston-con-palta-queso-crema-jamon-crudo-y-cherries-confitados",
     "categoria": "almuerzos",
     "nombre": "Tostón con palta, queso crema, jamón crudo y cherries confitados",
     "descripcion": "",
@@ -526,7 +526,7 @@
     "soloNoche": true
    },
    {
-    "id": "albondigas-con-salsa-stracciatella-y-ralladura-d",
+    "id": "albondigas-con-salsa-stracciatella-y-ralladura-de-limon",
     "categoria": "tapeo",
     "nombre": "Albóndigas con salsa, stracciatella y ralladura de limón",
     "descripcion": "Con pan casero",
@@ -554,14 +554,14 @@
     "soloNoche": true
    },
    {
-    "id": "burrata-con-rucula-jamon-crudo-cherries-confitad",
+    "id": "burrata-con-rucula-jamon-crudo-cherries-confitados-y-pesto",
     "categoria": "tapeo",
     "nombre": "Burrata con rúcula, jamón crudo, cherries confitados y pesto",
     "descripcion": "",
     "precio": 24000
    },
    {
-    "id": "burrata-con-rucula-caponata-miel-picante-y-pista",
+    "id": "burrata-con-rucula-caponata-miel-picante-y-pistachos",
     "categoria": "tapeo",
     "nombre": "Burrata con rúcula, caponata, miel picante y pistachos",
     "descripcion": "",
@@ -763,7 +763,7 @@
     "precio": 7000
    },
    {
-    "id": "cafe-con-leche-tostadas-con-mermelada-y-queso-cr",
+    "id": "cafe-con-leche-tostadas-con-mermelada-y-queso-crema",
     "categoria": "cafeteria",
     "nombre": "Café con leche + tostadas con mermelada y queso crema",
     "descripcion": "",
@@ -1256,7 +1256,7 @@
     "bodega": "Manos Negras"
    },
    {
-    "id": "dmv-gran-reserva-blend-petit-verdot-cabernet-fra",
+    "id": "dmv-gran-reserva-blend-petit-verdot-cabernet-franc-malbec",
     "categoria": "v-tintos",
     "nombre": "DMV Gran Reserva · Blend (Petit Verdot, Cabernet Franc, Malbec)",
     "descripcion": "Maipú, Mendoza · Don Manuel Villafañe",
@@ -2367,7 +2367,7 @@
     "cepa": "Blend"
    },
    {
-    "id": "socavones-reserva-cabernet-sauvignon-cabernet-fr",
+    "id": "socavones-reserva-cabernet-sauvignon-cabernet-franc-terra-camiar",
     "categoria": "vt-tintos",
     "nombre": "Socavones Reserva - Cabernet Sauvignon + Cabernet Franc - Terra Camiare",
     "descripcion": "",
@@ -2516,7 +2516,7 @@
     "precioMesa": 46000
    },
    {
-    "id": "via-revolucionaria-criolla-grande-matias-micheli",
+    "id": "via-revolucionaria-criolla-grande-matias-michelini",
     "categoria": "vt-tintos",
     "nombre": "Vía Revolucionaria Criolla Grande Matías Michelini",
     "descripcion": "",

@@ -37,7 +37,7 @@
   })();
 </script>
 <link rel="stylesheet" href="kit/kit.css?v=1">
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
@@ -170,7 +170,8 @@
             <button type="button" class="pin" style="--x:75%;--y:69%" data-pin="tabla-de-quesos" aria-label="Tabla de quesos"><span>6</span></button>
           </div>
         </div>
-        <div class="ficha-mesa" data-ficha-mesa aria-live="polite">
+      </div>
+      <div class="ficha-mesa" data-ficha-mesa aria-live="polite">
           <img data-fm-foto src="img/quesos-s.webp" alt="" width="700" height="933" loading="lazy">
           <div class="ficha-mesa__body">
             <b class="ficha-mesa__nom" data-fm-nom>Tabla de quesos</b>
@@ -178,7 +179,6 @@
             <div class="ficha-mesa__pie"><b data-fm-precio>$ 23.000</b><span data-fm-qty></span></div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -241,37 +241,25 @@
   <!-- CATAS -->
   <section class="catas sec" id="catas" aria-labelledby="catas-t">
     <div class="cont">
-      <div class="sec__cab">
-        <div>
+      <div class="catas__intro">
+        <div class="catas__txt">
           <p class="mono sec__k ent">Catas en Chigre</p>
           <h2 id="catas-t" class="sec__t ent" style="--d:1">La bodega viene a la mesa.</h2>
+          <p class="sec__p ent" style="--d:2">Cada tanto viene una bodega chica, sirve sus vinos en la mesa larga del salón y te cuenta cada uno. Son pocos lugares: elegí la fecha y anotate.</p>
+          <ol class="catas__pasos ent" style="--d:3">
+            <li><b>1</b><span>Elegís una fecha de la agenda.</span></li>
+            <li><b>2</b><span>Te anotás con tu nombre y WhatsApp.</span></li>
+            <li><b>3</b><span>Venís, probás los vinos y picás algo.</span></li>
+          </ol>
+          <p class="catas__ya ent" style="--d:4">Ya pasaron por Chigre: Mil Suelos, Pielihueso, Bira Wines, Arístides, Tutu Wines y Glam Wines.</p>
         </div>
-        <p class="sec__p sec__p--der ent" style="--d:2">Enólogos y bodegas chicas sirven sus vinos y los cuentan en la mesa larga del salón. Anotate antes de que se llene: el cupo baja en vivo.</p>
+        <figure class="catas__foto foto-ent"><img src="img/cata9.webp" alt="Una cata en el salón, frente a la pared de vinos" width="600" height="617" loading="lazy"></figure>
       </div>
-      <div class="catas__grid">
-        <article class="cata-prox ent" data-cata-prox>
-          <div class="cata-prox__foto"><img src="img/cata9.webp" alt="Una cata en el salón, frente a la pared de vinos" width="600" height="617" loading="lazy"></div>
-          <div class="cata-prox__body">
-            <span class="rotulo" data-cp-fecha>Próxima cata</span>
-            <h3 class="cata-prox__nom" data-cp-nom>Agenda de catas</h3>
-            <p class="cata-prox__desc" data-cp-desc></p>
-            <div class="cupo"><div class="cupo__txt"><span data-cp-quedan>&nbsp;</span><span class="mono" data-cp-precio>&nbsp;</span></div><div class="cupo__barra"><span data-cp-barra></span></div></div>
-            <div class="cata-prox__ctas">
-              <button type="button" class="btn btn--rojo btn--big" data-cp-anotar>Anotarme</button>
-              <a class="btn btn--linea-vino btn--big" data-cp-wa href="https://wa.me/5491125390383?text=Hola%20Chigre!%20Quiero%20que%20me%20avisen%20de%20la%20pr%C3%B3xima%20cata" target="_blank" rel="noopener">Avisame la próxima</a>
-            </div>
-          </div>
-        </article>
-        <div class="catas__lista">
-          <div class="catas__sig" data-catas-sig></div>
-          <div class="catas__pasaron ent" style="--d:2">
-            <span class="rot">Ya pasaron por Chigre</span>
-            <div class="catas__bodegas">
-              <span class="rotulo rotulo--borde">Mil Suelos</span><span class="rotulo rotulo--borde">Pielihueso</span><span class="rotulo rotulo--borde">Bira Wines</span><span class="rotulo rotulo--borde">Arístides</span><span class="rotulo rotulo--borde">Tutu Wines</span><span class="rotulo rotulo--borde">Fulanos Wines</span><span class="rotulo rotulo--borde">Glam Wines</span>
-            </div>
-          </div>
-        </div>
+      <div class="catas__agenda-cab ent">
+        <h3 class="rot">Próximas catas</h3>
+        <a class="catas__avisame" href="https://wa.me/5491125390383?text=Hola%20Chigre!%20Quiero%20que%20me%20avisen%20de%20las%20pr%C3%B3ximas%20catas" target="_blank" rel="noopener">Avisame las próximas →</a>
       </div>
+      <div class="catas__agenda" data-catas-agenda></div>
       <p class="catas__nota">Demo: las fechas son de ejemplo. El bar las carga, edita y ve los anotados desde su panel.</p>
       <div class="galeria-catas" data-arrastre aria-label="Fotos de catas pasadas">
         <img src="img/cata1-s.webp" alt="Una cata con el salón lleno" width="600" height="833" loading="lazy">
@@ -327,8 +315,14 @@
         <p class="mono sec__k ent">Reservas</p>
         <h2 id="llegar-t" class="sec__t ent" style="--d:1">Guardame la mesa.</h2>
         <p class="sec__p ent" style="--d:2">Mediodía o noche, salón o vereda. Para grupos de más de 8 o un evento, escribinos por WhatsApp.</p>
-        <div class="llegar__form ent" style="--d:3"><div data-kit="reservas"></div></div>
-        <button type="button" class="btn btn--rojo btn--big llegar__btn-celu" data-kit-open="reservas">Reservar mesa</button>
+        <div class="turnos ent" style="--d:3">
+          <button type="button" class="turno" data-kit-open="reservas"><span class="mono">Mediodía</span><b>12:00–14:30 hs</b><span>Almuerzos y tapeo</span></button>
+          <button type="button" class="turno" data-kit-open="reservas"><span class="mono">Noche</span><b>19:00–22:30 hs</b><span>Tapeo, pizzas y vinos</span></button>
+        </div>
+        <div class="llegar__ctas ent" style="--d:4">
+          <button type="button" class="btn btn--rojo btn--big" data-kit-open="reservas">Reservar mesa</button>
+          <a class="btn btn--linea-vino btn--big" href="https://wa.me/5491125390383?text=Hola%20Chigre!%20Quiero%20consultar%20por%20una%20reserva%20para%20un%20grupo" target="_blank" rel="noopener">Grupos y eventos</a>
+        </div>
       </div>
       <div class="llegar__info">
         <div class="mapa ent"><iframe title="Mapa: Chigre en Ramallo 2904, Saavedra" src="https://www.google.com/maps?q=Ramallo+2904,+Saavedra,+Buenos+Aires&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
@@ -356,7 +350,7 @@
   <p class="pie__credito">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></p>
 </footer>
 
-<script src="js/ui.js?v=2"></script>
-<script type="module" src="js/app.js?v=2"></script>
+<script src="js/ui.js?v=3"></script>
+<script type="module" src="js/app.js?v=3"></script>
 </body>
 </html>

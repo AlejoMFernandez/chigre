@@ -176,17 +176,18 @@ verMomento(MOMENTO);
 let productos = [];
 async function cargarProductos() {
   try { productos = await kit.store.getProductos(); } catch (err) { console.warn('[chigre] productos', err); productos = []; }
-  pintarBiblioteca(); pintarFichaMesa(pinActual);
+  pintarBiblioteca(); pintarFichaMesa(pinActual, true);
 }
 
 /* ---------- la mesa servida ---------- */
 const ficha = $('[data-ficha-mesa]');
 const escena = $('.mesa__escena');
 let pinActual = 'tabla-de-quesos';
-function pintarFichaMesa(id) {
+function pintarFichaMesa(id, forzar) {
   if (!ficha || id === 'vino') return;
+  if (id === pinActual && !forzar && ficha.dataset.listo) return;
   const p = productos.find((x) => x.id === id); if (!p) return;
-  pinActual = id;
+  pinActual = id; ficha.dataset.listo = '1';
   const img = $('[data-fm-foto]', ficha);
   if (p.foto) { img.src = kit.asset(p.foto); img.style.objectFit = 'cover'; img.style.background = ''; }
   else { img.src = 'img/copa-vino.png'; img.style.objectFit = 'contain'; img.style.background = '#F1E2D3'; }
@@ -345,37 +346,36 @@ async function cupoDe(ev) {
   return { libres: ev.cupo, cap: ev.cupo };
 }
 async function pintarCatas() {
-  const evs = kit.eventos ? kit.eventos.proximos().filter((e) => e.reserva !== false || true) : [];
-  const box = $('[data-cata-prox]');
+  const evs = kit.eventos ? kit.eventos.proximos() : [];
+  const box = $('[data-catas-agenda]'); if (!box) return;
   if (!evs.length) {
-    $('[data-cp-nom]').textContent = 'Pronto anunciamos la próxima';
-    $('[data-cp-fecha]').textContent = 'Agenda de catas';
-    $('[data-cp-anotar]').hidden = true;
-    $('[data-catas-sig]').innerHTML = '';
+    box.innerHTML = '<p class="catas__vacio">Pronto anunciamos la próxima cata. Pedí que te avisemos por WhatsApp.</p>';
     return;
   }
-  const [p, ...resto] = evs;
-  const c = await cupoDe(p);
-  $('[data-cp-fecha]').textContent = 'Próxima · ' + fechaLarga(p.fecha, p.hora);
-  $('[data-cp-nom]').textContent = p.nombre;
-  $('[data-cp-desc]').textContent = p.descripcion || '';
-  $('[data-cp-quedan]').innerHTML = c.libres > 0 ? `Quedan <b>${c.libres}</b> de ${c.cap} lugares` : '<b>Cupo completo</b>';
-  $('[data-cp-precio]').textContent = p.precio ? kit.money(p.precio) + ' por persona' : 'Valor a confirmar';
-  $('[data-cp-barra]').parentElement.style.setProperty('--p', '0%');
-  requestAnimationFrame(() => $('[data-cp-barra]').style.width = `${Math.round(((c.cap - c.libres) / c.cap) * 100)}%`);
-  const an = $('[data-cp-anotar]'); an.hidden = false; an.disabled = c.libres <= 0; an.textContent = c.libres > 0 ? 'Anotarme' : 'Completo';
-  an.onclick = () => kit.reservas.abrir({ fecha: p.fecha, hora: p.hora, personas: 2 });
-  const sig = $('[data-catas-sig]');
-  const minis = await Promise.all(resto.slice(0, 3).map(async (e, i) => {
-    const cc = await cupoDe(e);
-    return `<article class="cata-mini ent visto" style="--d:${i}"><span class="cata-mini__f">${esc(fechaCorta(e.fecha, e.hora))}</span><span class="cata-mini__n">${esc(e.nombre)}</span>
-      <div class="cata-mini__pie"><span class="mono" style="font-size:12px;color:#F4C9DA">${cc.libres} lugares</span><button type="button" data-anotar="${esc(e.id)}">Anotarme</button></div></article>`;
+  const items = await Promise.all(evs.slice(0, 3).map(async (e, i) => {
+    const c = await cupoDe(e);
+    const d = new Date(e.fecha + 'T12:00:00');
+    const pct = Math.round(((c.cap - c.libres) / c.cap) * 100);
+    const lleno = c.libres <= 0;
+    return { e, c, html: `<article class="cata ent${i === 0 ? ' cata--prox' : ''}" style="--d:${i}">
+      <div class="cata__fecha"><span class="cata__dia">${esc(DCORTO[d.getDay()])}</span><b>${d.getDate()}</b><span class="cata__mes">${esc(MESES[d.getMonth()].slice(0, 3))}</span></div>
+      <div class="cata__body">
+        ${i === 0 ? '<span class="cata__tag mono">La próxima</span>' : ''}
+        <h4 class="cata__nom">${esc(e.nombre)}</h4>
+        ${e.descripcion ? `<p class="cata__desc">${esc(e.descripcion)}</p>` : ''}
+        <p class="cata__datos mono">${esc(DSEM[d.getDay()])} · ${esc(e.hora)} hs · ${e.precio ? esc(kit.money(e.precio)) + ' por persona' : 'valor a confirmar'}</p>
+        <div class="cata__cupo"><div class="cata__barra"><i style="--p:${pct}%"></i></div><span>${lleno ? '<b>Cupo completo</b>' : `Quedan <b>${c.libres}</b> de ${c.cap} lugares`}</span></div>
+      </div>
+      <button type="button" class="btn ${i === 0 ? 'btn--rojo' : 'btn--linea-vino'} cata__btn" data-anotar="${esc(e.id)}"${lleno ? ' disabled' : ''}>${lleno ? 'Completo' : 'Anotarme'}</button>
+    </article>` };
   }));
-  sig.innerHTML = minis.join('');
-  $$('[data-anotar]', sig).forEach((b) => { const e = resto.find((x) => x.id === b.dataset.anotar); b.onclick = () => kit.reservas.abrir({ fecha: e.fecha, hora: e.hora, personas: 2 }); });
+  box.innerHTML = items.map((x) => x.html).join('');
+  $$('[data-anotar]', box).forEach((b) => { const e = evs.find((x) => x.id === b.dataset.anotar); b.onclick = () => kit.reservas.abrir({ fecha: e.fecha, hora: e.hora, personas: 2 }); });
+  window.ChigreObservar && window.ChigreObservar(box);
+  const p = items[0];
   const hn = $('[data-cata-nombre]'), hf = $('[data-cata-fecha]');
-  if (hn) hn.textContent = p.nombre;
-  if (hf) hf.textContent = `${fechaCorta(p.fecha, p.hora)} · quedan ${c.libres} lugares`;
+  if (hn) hn.textContent = p.e.nombre;
+  if (hf) hf.textContent = `${fechaCorta(p.e.fecha, p.e.hora)} · quedan ${p.c.libres} lugares`;
 }
 document.addEventListener('kit:eventos', pintarCatas);
 
