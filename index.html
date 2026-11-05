@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chigre · Bar de vinos y vinoteca en Saavedra</title>
+<meta name="description" content="Bar de vinos y vinoteca en Ramallo 2904, Saavedra. Tapeo, pizzas, 130 etiquetas para llevar, catas y reservas online.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chigre">
+<meta property="og:url" content="https://chigre.vercel.app/">
+<meta property="og:title" content="Chigre · Vinoteca y bar de vinos en Saavedra">
+<meta property="og:description" content="130 etiquetas para llevar, tapeo, catas y reservas online. Ramallo 2904, Saavedra.">
+<meta property="og:image" content="https://chigre.vercel.app/img/og.jpg?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Chigre: la pared de vinos y el cartel rojo con el logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chigre.vercel.app/img/og.jpg?v=1">
+<meta name="theme-color" content="#F7EBDD">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/gloock-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  // momento del día (el reloj): mediodía de 6 a 17:59, noche el resto. ?momento=mediodia|noche lo fuerza.
+  (function () {
+    var d = document.documentElement, q = new URLSearchParams(location.search).get('momento'), m;
+    if (q === 'mediodia' || q === 'noche') m = q;
+    else {
+      try { var h = Number(new Intl.DateTimeFormat('es-AR', { hour: 'numeric', hourCycle: 'h23', timeZone: 'America/Argentina/Buenos_Aires' }).format(new Date())); m = h >= 6 && h < 18 ? 'mediodia' : 'noche'; }
+      catch (e) { var hh = new Date().getHours(); m = hh >= 6 && hh < 18 ? 'mediodia' : 'noche'; }
+    }
+    d.dataset.momento = m;
+    var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!rm) d.classList.add('con-intro');
+    d.classList.add('js');
+  })();
+</script>
+<link rel="stylesheet" href="kit/kit.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+
+<div class="intro" aria-hidden="true">
+  <div class="intro__caja"><img class="intro__logo intro__logo--noche" src="img/logo-crema.svg" alt="" width="960" height="304"><img class="intro__logo intro__logo--dia" src="img/logo-rojo.svg" alt="" width="960" height="304"></div>
+</div>
+
+<header class="barra" id="barra">
+  <a class="barra__logo" href="#inicio" aria-label="Chigre, inicio">
+    <img class="logo-dia" src="img/logo.svg" alt="chigre" width="960" height="304">
+    <img class="logo-noche" src="img/logo-crema.svg" alt="" width="960" height="304">
+  </a>
+  <nav class="barra__nav" aria-label="Secciones">
+    <a href="#carta">Carta</a><a href="#vinoteca">Vinoteca</a><a href="#catas">Catas</a><a href="#lugar">El lugar</a><a href="#llegar">Cómo llegar</a>
+  </nav>
+  <div class="barra__acc">
+    <span class="copita" aria-hidden="true"><svg viewBox="0 0 24 40"><defs><clipPath id="copa-clip"><path d="M3 2h18c0 8-2 14-9 15C5 16 3 10 3 2Z"/></clipPath></defs><rect class="copita__vino" x="0" y="2" width="24" height="16" clip-path="url(#copa-clip)"/><path d="M3 2h18c0 8-2 14-9 15C5 16 3 10 3 2ZM12 17v17M6 38h12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+    <button type="button" class="btn btn--linea barra__cajon" data-kit-open="carrito">Cajón · <span data-cajon-n>0</span></button>
+    <button type="button" class="btn btn--rojo barra__reservar" data-kit-open="reservas">Reservar</button>
+    <button type="button" class="barra__menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Menú">
+    <a href="#carta">Carta</a><a href="#mesa">La mesa servida</a><a href="#vinoteca">Vinoteca</a><a href="#catas">Catas</a><a href="#lugar">El lugar</a><a href="#llegar">Reservar y cómo llegar</a>
+  </nav>
+  <p class="menu__pie">Ramallo 2904 · Saavedra<br><span data-hoy-horario>Martes a sábados</span></p>
+</div>
+
+<main id="inicio">
+
+  <!-- HERO B · LA PARED -->
+  <section class="hero" aria-labelledby="hero-t">
+    <div class="hero__txt">
+      <p class="rot hero__kicker ent" style="--d:1">Bar de vinos y vinoteca · Saavedra</p>
+      <h1 id="hero-t" class="hero__t"><span class="ren"><span style="--d:2">Elegí de la pared.</span></span> <span class="ren"><span class="rojo" style="--d:3">Te lo llevás.</span></span></h1>
+      <p class="hero__sub ent" style="--d:4">Las 130 etiquetas que ves en el salón, con su precio a mano, para sumar al cajón y pasar a buscar. Y si te quedás: mesa, tapeo y vino por copa.</p>
+      <div class="hero__ctas ent" style="--d:5">
+        <a class="btn btn--rojo btn--big" href="#vinoteca">Ver la vinoteca</a>
+        <button type="button" class="btn btn--linea btn--big" data-kit-open="reservas">Reservar mesa</button>
+      </div>
+      <a class="hero__google ent" style="--d:6" href="https://www.google.com/maps/search/?api=1&amp;query=Chigre+Ramallo+2904+Saavedra" target="_blank" rel="noopener"><span class="estrellas" aria-hidden="true">★★★★★</span> <b>5,0</b> · 747 reseñas en Google</a>
+    </div>
+    <figure class="hero__foto">
+      <picture>
+        <source media="(min-width: 900px)" srcset="img/pared.webp 1400w, img/pared-s.webp 700w" sizes="45vw">
+        <img src="img/pared-s.webp" srcset="img/pared-s.webp 700w, img/pared.webp 1400w" sizes="100vw" width="1400" height="1713" alt="La pared de botellas de Chigre, con los precios escritos a mano en cada una" fetchpriority="high">
+      </picture>
+      <span class="precio-mano" style="--x:9%;--y:30%;--r:-4deg;--d:7">Pielihueso $36.000</span>
+      <span class="precio-mano" style="--x:44%;--y:55%;--r:3deg;--d:8">Tutu Malbec $28.000</span>
+      <span class="precio-mano" style="--x:14%;--y:76%;--r:-2deg;--d:9">Cara Sur $29.000</span>
+    </figure>
+    <div class="hero__tira terrazo">
+      <a href="#vinoteca" data-filtro="vt-blancos">Blancos <b data-n="vt-blancos">18</b></a>
+      <a href="#vinoteca" data-filtro="vt-naranjos">Naranjos <b data-n="vt-naranjos">7</b></a>
+      <a href="#vinoteca" data-filtro="vt-rosados">Rosados <b data-n="vt-rosados">6</b></a>
+      <a href="#vinoteca" data-filtro="vt-espumantes">Espumantes <b data-n="vt-espumantes">7</b></a>
+      <a href="#vinoteca" data-filtro="vt-tintos">Tintos <b data-n="vt-tintos">92</b></a>
+    </div>
+  </section>
+
+  <!-- HOY EN CHIGRE -->
+  <section class="hoy" aria-label="Hoy en Chigre">
+    <div class="hoy__fila">
+      <article class="hoy__card ent">
+        <span class="mono hoy__k">Hoy</span>
+        <b class="hoy__estado" data-estado>Martes a sábados</b>
+        <span class="hoy__sub" data-hoy-horario>Mediodía y noche</span>
+      </article>
+      <a class="hoy__card ent" style="--d:1" href="https://www.google.com/maps/search/?api=1&amp;query=Chigre+Ramallo+2904+Saavedra" target="_blank" rel="noopener">
+        <span class="mono hoy__k">Google</span>
+        <b class="hoy__estado"><span class="estrellas" aria-hidden="true">★★★★★</span> 5,0</b>
+        <span class="hoy__sub">747 reseñas · leelas en Maps</span>
+      </a>
+      <article class="hoy__card ent" style="--d:2">
+        <span class="mono hoy__k">Próxima cata</span>
+        <b class="hoy__estado" data-cata-nombre>Agenda de catas</b>
+        <span class="hoy__sub"><span data-cata-fecha>Fecha y cupo abajo</span> · <a href="#catas">Anotarme</a></span>
+      </article>
+    </div>
+  </section>
+
+  <!-- CARTA -->
+  <section class="carta sec" id="carta" aria-labelledby="carta-t">
+    <div class="cont">
+      <div class="sec__cab">
+        <div>
+          <p class="mono sec__k ent" data-carta-kicker>La carta</p>
+          <h2 id="carta-t" class="sec__t ent" style="--d:1">Para picar, compartir y pedir otra.</h2>
+        </div>
+        <div class="seg ent" style="--d:2" role="tablist" aria-label="Momento de la carta">
+          <button type="button" role="tab" data-momento-btn="mediodia" aria-selected="false">Mediodía</button>
+          <button type="button" role="tab" data-momento-btn="noche" aria-selected="false">Noche</button>
+          <button type="button" role="tab" data-momento-btn="bebidas" aria-selected="false">Bebidas y vinos</button>
+        </div>
+      </div>
+      <div class="carta__grid">
+        <div class="carta__cartas">
+          <div class="carta__pane" data-pane="mediodia"><div id="carta-mediodia" data-kit="carta" data-kit-categorias="almuerzos,tapeo,postres,cafeteria"></div></div>
+          <div class="carta__pane" data-pane="noche"><div id="carta-noche" data-kit="carta" data-kit-categorias="tapeo,pizzas,postres,cafeteria"></div></div>
+          <div class="carta__pane" data-pane="bebidas"><div id="carta-bebidas" data-kit="carta" data-kit-pedir="false" data-kit-categorias="copa,v-blancos,v-nre,v-tintos,tragos,sinalcohol"></div></div>
+        </div>
+        <figure class="carta__foto" aria-hidden="true">
+          <div class="carta__foto-caja"><img data-carta-foto src="img/empanadas2.webp" alt="" width="480" height="780" loading="lazy"></div>
+          <figcaption data-carta-foto-nom>Empanada de osobuco</figcaption>
+        </figure>
+      </div>
+      <p class="carta__pie">Por favor avisanos si tenés alguna alergia u otra restricción alimentaria. · <a href="carta/">Carta completa del QR</a></p>
+    </div>
+  </section>
+
+  <!-- MESA SERVIDA -->
+  <section class="mesa sec" id="mesa" aria-labelledby="mesa-t">
+    <div class="cont mesa__grid">
+      <div class="mesa__txt">
+        <p class="mono sec__k ent">La mesa servida</p>
+        <h2 id="mesa-t" class="sec__t ent" style="--d:1">Señalá y te lo traemos.</h2>
+        <p class="sec__p ent" style="--d:2">La ilustración de la tapa de la carta, servida. Cada plato tiene su punto: <span class="solo-mouse">pasá el mouse</span><span class="solo-dedo">deslizá la mesa y tocá</span> y aparece con su precio.</p>
+      </div>
+      <div class="mesa__escena ent" style="--d:2">
+        <div class="mesa__scroll" data-arrastre>
+          <div class="mesa__ilu">
+            <img src="img/mesa.webp" srcset="img/mesa-s.webp 900w, img/mesa.webp 1568w" sizes="(min-width: 900px) 62vw, 640px" width="1568" height="864" alt="Ilustración de una mesa servida con vino, empanadas, pizza, provoleta y quesos" loading="lazy">
+            <button type="button" class="pin" style="--x:43%;--y:43%" data-pin="empanada-de-osobuco-braseado-al-vino-tinto" aria-label="Empanadas"><span>1</span></button>
+            <button type="button" class="pin" style="--x:17%;--y:52%" data-pin="albondigas-con-salsa-stracciatella-y-ralladura-de-limon" aria-label="Albóndigas"><span>2</span></button>
+            <button type="button" class="pin" style="--x:47%;--y:60%" data-pin="margarita-con-cherries-confitados" aria-label="Pizza"><span>3</span></button>
+            <button type="button" class="pin" style="--x:23%;--y:70%" data-pin="provoleta-cherries-confitados-y-gremolatta" aria-label="Provoleta"><span>4</span></button>
+            <button type="button" class="pin pin--vino" style="--x:33%;--y:31%" data-pin="vino" aria-label="El vino: ir a la vinoteca"><span>5</span></button>
+            <button type="button" class="pin" style="--x:75%;--y:69%" data-pin="tabla-de-quesos" aria-label="Tabla de quesos"><span>6</span></button>
+          </div>
+        </div>
+        <div class="ficha-mesa" data-ficha-mesa aria-live="polite">
+          <img data-fm-foto src="img/quesos-s.webp" alt="" width="700" height="933" loading="lazy">
+          <div class="ficha-mesa__body">
+            <b class="ficha-mesa__nom" data-fm-nom>Tabla de quesos</b>
+            <span class="ficha-mesa__desc" data-fm-desc>Variedad de quesos, aceitunas, almendras y pan casero</span>
+            <div class="ficha-mesa__pie"><b data-fm-precio>$ 23.000</b><span data-fm-qty></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VINOTECA -->
+  <section class="vinoteca sec" id="vinoteca" aria-labelledby="vino-t">
+    <div class="cont">
+      <div class="sec__cab">
+        <div>
+          <p class="mono sec__k ent">La vinoteca · <span data-total-vinos>130</span> etiquetas para llevar</p>
+          <h2 id="vino-t" class="sec__t ent" style="--d:1">La pared, en tu celu.</h2>
+        </div>
+        <p class="sec__p sec__p--der ent" style="--d:2">Bodegas chicas, naranjos, pet nat y tintos de todo el país. Sumalos al cajón y pasás a buscarlos por Ramallo 2904.</p>
+      </div>
+      <div class="vt-filtros ent" style="--d:2">
+        <div class="chips" role="radiogroup" aria-label="Tipo de vino" data-tipos>
+          <button type="button" class="chip is-on" data-tipo="" role="radio" aria-checked="true">Todos</button>
+          <button type="button" class="chip" data-tipo="vt-blancos" role="radio" aria-checked="false">Blancos</button>
+          <button type="button" class="chip" data-tipo="vt-naranjos" role="radio" aria-checked="false">Naranjos</button>
+          <button type="button" class="chip" data-tipo="vt-rosados" role="radio" aria-checked="false">Rosados</button>
+          <button type="button" class="chip" data-tipo="vt-espumantes" role="radio" aria-checked="false">Espumantes</button>
+          <button type="button" class="chip" data-tipo="vt-tintos" role="radio" aria-checked="false">Tintos</button>
+        </div>
+        <div class="vt-filtros__sel">
+          <label class="sel"><span class="sr">Cepa</span><select data-cepa><option value="">Todas las cepas</option></select></label>
+          <label class="sel"><span class="sr">Precio</span><select data-precio>
+            <option value="">Cualquier precio</option><option value="0-15000">Hasta $15.000</option><option value="15000-25000">$15.000 a $25.000</option><option value="25000-40000">$25.000 a $40.000</option><option value="40000-999999">Más de $40.000</option>
+          </select></label>
+          <label class="sel sel--buscar"><span class="sr">Buscar</span><input type="search" data-buscar placeholder="Buscar bodega o vino" autocomplete="off"></label>
+        </div>
+      </div>
+      <div class="vt-grid">
+        <div class="biblioteca ent" data-biblioteca aria-label="Estantes de la vinoteca"></div>
+        <aside class="vt-ficha" data-vt-ficha aria-live="polite">
+          <div class="vt-ficha__vacia" data-vt-vacia>
+            <img src="img/copa-vino.png" alt="" width="325" height="238">
+            <p>Tocá una botella para ver su ficha.</p>
+          </div>
+          <div class="vt-ficha__llena" data-vt-llena hidden>
+            <button type="button" class="vt-ficha__x" data-vt-cerrar aria-label="Cerrar ficha">×</button>
+            <div class="vt-ficha__cab">
+              <div class="botella botella--grande" data-vt-bot><span class="botella__cuello"></span><span class="botella__cuerpo"><span class="botella__precio"></span><span class="botella__etq"></span></span></div>
+              <div>
+                <span class="mono vt-ficha__tipo" data-vt-tipo></span>
+                <h3 class="vt-ficha__nom" data-vt-nom></h3>
+              </div>
+            </div>
+            <dl class="vt-ficha__datos" data-vt-datos></dl>
+            <p class="vt-ficha__nota" data-vt-nota></p>
+            <div class="vt-ficha__comprar">
+              <div class="paso" role="group" aria-label="Cantidad"><button type="button" data-vt-menos aria-label="Una botella menos">−</button><output data-vt-n>1</output><button type="button" data-vt-mas aria-label="Una botella más">+</button></div>
+              <button type="button" class="btn btn--rojo btn--big vt-ficha__add" data-vt-add>Al cajón</button>
+            </div>
+            <p class="vt-ficha__pie">Retiro en Ramallo 2904, martes a sábados. Pagás con Mercado Pago o al retirar.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATAS -->
+  <section class="catas sec" id="catas" aria-labelledby="catas-t">
+    <div class="cont">
+      <div class="sec__cab">
+        <div>
+          <p class="mono sec__k ent">Catas en Chigre</p>
+          <h2 id="catas-t" class="sec__t ent" style="--d:1">La bodega viene a la mesa.</h2>
+        </div>
+        <p class="sec__p sec__p--der ent" style="--d:2">Enólogos y bodegas chicas sirven sus vinos y los cuentan en la mesa larga del salón. Anotate antes de que se llene: el cupo baja en vivo.</p>
+      </div>
+      <div class="catas__grid">
+        <article class="cata-prox ent" data-cata-prox>
+          <div class="cata-prox__foto"><img src="img/cata9.webp" alt="Una cata en el salón, frente a la pared de vinos" width="600" height="617" loading="lazy"></div>
+          <div class="cata-prox__body">
+            <span class="rotulo" data-cp-fecha>Próxima cata</span>
+            <h3 class="cata-prox__nom" data-cp-nom>Agenda de catas</h3>
+            <p class="cata-prox__desc" data-cp-desc></p>
+            <div class="cupo"><div class="cupo__txt"><span data-cp-quedan>&nbsp;</span><span class="mono" data-cp-precio>&nbsp;</span></div><div class="cupo__barra"><span data-cp-barra></span></div></div>
+            <div class="cata-prox__ctas">
+              <button type="button" class="btn btn--rojo btn--big" data-cp-anotar>Anotarme</button>
+              <a class="btn btn--linea-vino btn--big" data-cp-wa href="https://wa.me/5491125390383?text=Hola%20Chigre!%20Quiero%20que%20me%20avisen%20de%20la%20pr%C3%B3xima%20cata" target="_blank" rel="noopener">Avisame la próxima</a>
+            </div>
+          </div>
+        </article>
+        <div class="catas__lista">
+          <div class="catas__sig" data-catas-sig></div>
+          <div class="catas__pasaron ent" style="--d:2">
+            <span class="rot">Ya pasaron por Chigre</span>
+            <div class="catas__bodegas">
+              <span class="rotulo rotulo--borde">Mil Suelos</span><span class="rotulo rotulo--borde">Pielihueso</span><span class="rotulo rotulo--borde">Bira Wines</span><span class="rotulo rotulo--borde">Arístides</span><span class="rotulo rotulo--borde">Tutu Wines</span><span class="rotulo rotulo--borde">Fulanos Wines</span><span class="rotulo rotulo--borde">Glam Wines</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="catas__nota">Demo: las fechas son de ejemplo. El bar las carga, edita y ve los anotados desde su panel.</p>
+      <div class="galeria-catas" data-arrastre aria-label="Fotos de catas pasadas">
+        <img src="img/cata1-s.webp" alt="Una cata con el salón lleno" width="600" height="833" loading="lazy">
+        <img src="img/cata2.webp" alt="Una enóloga contando sus vinos" width="600" height="958" loading="lazy">
+        <img src="img/salon2-s.webp" alt="Mesas llenas frente a la pared de vinos" width="700" height="875" loading="lazy">
+        <img src="img/cata5.webp" alt="Cata en la mesa larga" width="600" height="525" loading="lazy">
+        <img src="img/cata8.webp" alt="Degustación de Pielihueso en Chigre" width="600" height="775" loading="lazy">
+        <img src="img/brindis.webp" alt="Brindis con dos copas de tinto" width="600" height="1067" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- EL LUGAR -->
+  <section class="lugar sec" id="lugar" aria-labelledby="lugar-t">
+    <div class="cont">
+      <div class="sec__cab">
+        <div>
+          <p class="mono sec__k ent">El lugar</p>
+          <h2 id="lugar-t" class="sec__t ent" style="--d:1">Una esquina con la luz prendida.</h2>
+        </div>
+        <p class="sec__p sec__p--der ent" style="--d:2">Ramallo y Conesa. Una pared entera de botellas, mesas de terrazo, la vereda para las noches lindas y Ámbar, que recibe a todos.</p>
+      </div>
+      <div class="mosaico">
+        <figure class="m1 foto-ent"><img src="img/fachada-s.webp" srcset="img/fachada-s.webp 700w, img/fachada.webp 1000w" sizes="(min-width: 900px) 30vw, 80vw" width="1000" height="1250" alt="La fachada vidriada con el cartel rojo de chigre" loading="lazy"></figure>
+        <figure class="m2 foto-ent"><img src="img/salon-s.webp" srcset="img/salon-s.webp 700w, img/salon.webp 1400w" sizes="(min-width: 900px) 34vw, 80vw" width="1400" height="1750" alt="El salón lleno frente a la pared de vinos" loading="lazy"></figure>
+        <figure class="m3 foto-ent"><img src="img/equipo-s.webp" srcset="img/equipo-s.webp 700w, img/equipo.webp 1400w" sizes="(min-width: 900px) 30vw, 80vw" width="1400" height="1400" alt="El equipo de Chigre detrás de la barra" loading="lazy"></figure>
+        <figure class="m4 foto-ent"><img src="img/ambar-s.webp" srcset="img/ambar-s.webp 700w, img/ambar.webp 1200w" sizes="(min-width: 900px) 24vw, 80vw" width="1200" height="1600" alt="Ámbar, la perra del bar" loading="lazy"><figcaption>Ámbar</figcaption></figure>
+        <figure class="m5 foto-ent"><img src="img/barra-s.webp" srcset="img/barra-s.webp 700w, img/barra.webp 1365w" sizes="(min-width: 900px) 30vw, 80vw" width="1365" height="1706" alt="La barra y la cocina abierta" loading="lazy"></figure>
+        <figure class="m6 foto-ent"><img src="img/esquina-s.webp" srcset="img/esquina-s.webp 700w, img/esquina.webp 1400w" sizes="(min-width: 900px) 40vw, 80vw" width="1400" height="1399" alt="La esquina de noche con la vereda llena" loading="lazy"></figure>
+      </div>
+      <div class="mazo" data-mazo aria-label="Fotos del lugar: deslizá para pasarlas"></div>
+    </div>
+  </section>
+
+  <!-- RESEÑAS -->
+  <section class="resenas sec" id="resenas" aria-labelledby="res-t">
+    <div class="cont">
+      <div class="sec__cab">
+        <div>
+          <p class="mono sec__k ent">Lo que dicen en Google</p>
+          <h2 id="res-t" class="sec__t ent" style="--d:1"><span class="estrellas estrellas--t" aria-hidden="true">★★★★★</span> 5,0 con 747 reseñas.</h2>
+        </div>
+        <a class="btn btn--linea-vino ent" style="--d:2" href="https://www.google.com/maps/search/?api=1&amp;query=Chigre+Ramallo+2904+Saavedra" target="_blank" rel="noopener">Leer todas en Google</a>
+      </div>
+      <div class="resenas__fila" data-arrastre data-resenas></div>
+    </div>
+  </section>
+
+  <!-- RESERVAR + CÓMO LLEGAR -->
+  <section class="llegar sec" id="llegar" aria-labelledby="llegar-t">
+    <div class="cont llegar__grid">
+      <div class="llegar__resv">
+        <p class="mono sec__k ent">Reservas</p>
+        <h2 id="llegar-t" class="sec__t ent" style="--d:1">Guardame la mesa.</h2>
+        <p class="sec__p ent" style="--d:2">Mediodía o noche, salón o vereda. Para grupos de más de 8 o un evento, escribinos por WhatsApp.</p>
+        <div class="llegar__form ent" style="--d:3"><div data-kit="reservas"></div></div>
+        <button type="button" class="btn btn--rojo btn--big llegar__btn-celu" data-kit-open="reservas">Reservar mesa</button>
+      </div>
+      <div class="llegar__info">
+        <div class="mapa ent"><iframe title="Mapa: Chigre en Ramallo 2904, Saavedra" src="https://www.google.com/maps?q=Ramallo+2904,+Saavedra,+Buenos+Aires&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="llegar__datos ent" style="--d:1">
+          <div><span class="mono sec__k">Dónde</span><p>Ramallo 2904, esquina Conesa<br>Saavedra, CABA</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ramallo+2904,+Saavedra,+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar →</a></div>
+          <div><span class="mono sec__k">Horarios</span><ul class="horarios" data-horarios></ul></div>
+          <div><span class="mono sec__k">Contacto</span><p><a href="https://wa.me/5491125390383" target="_blank" rel="noopener">WhatsApp 11 2539-0383</a><br><a href="https://instagram.com/chigre.bar" target="_blank" rel="noopener">@chigre.bar</a></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="cont pie__grid">
+    <div class="pie__marca">
+      <img src="img/logo-crema.svg" alt="chigre" width="960" height="304" loading="lazy">
+      <p>Bar de vinos y vinoteca</p>
+      <img class="pie__copa" src="img/copa-crema.png" alt="" width="325" height="238" loading="lazy">
+    </div>
+    <div><span class="mono pie__k">Dirección</span><p>Ramallo 2904, esq. Conesa<br>Saavedra, Buenos Aires</p></div>
+    <div><span class="mono pie__k">Horarios</span><p data-pie-horario>Martes a sábados<br>12:00 a 15:30 hs · 18:30 a 00:00 hs</p></div>
+    <div><span class="mono pie__k">Seguinos</span><p><a href="https://instagram.com/chigre.bar" target="_blank" rel="noopener">Instagram @chigre.bar</a><br><a href="https://wa.me/5491125390383" target="_blank" rel="noopener">WhatsApp 11 2539-0383</a><br><a href="carta/">La carta (QR)</a> · <a href="admin/" target="_blank" rel="noopener">Panel</a></p></div>
+  </div>
+  <p class="pie__credito">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></p>
+</footer>
+
+<script src="js/ui.js?v=1"></script>
+<script type="module" src="js/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,2434 @@
+{
+ "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+ "id": "chigre",
+ "nombre": "Chigre",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "whatsapp": "5491125390383",
+ "instagram": "chigre.bar",
+ "prefijoPedido": "CH",
+ "direccion": "Ramallo 2904, Saavedra",
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/logo.svg",
+  "logoPanel": "img/logo-crema.svg",
+  "logoClaro": "img/logo-crema.svg",
+  "colores": {
+   "fondo": "#F7EBDD",
+   "superficie": "#FFFFFF",
+   "texto": "#141012",
+   "primario": "#D8262A",
+   "acento": "#5E1038",
+   "borde": "#D9C7B6"
+  },
+  "fuentes": {
+   "titulos": "'Gloock', Georgia, serif",
+   "texto": "'DM Sans', system-ui, sans-serif",
+   "googleFonts": ""
+  },
+  "estilo": {
+   "forma": "recta",
+   "sombra": "suave",
+   "borde": "1px",
+   "mayusculas": false
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": true,
+  "reservas": true,
+  "admin": true,
+  "tienda": true
+ },
+ "horarios": {
+  "lun": [],
+  "mar": [
+   [
+    "12:00",
+    "15:30"
+   ],
+   [
+    "18:30",
+    "00:00"
+   ]
+  ],
+  "mie": [
+   [
+    "12:00",
+    "15:30"
+   ],
+   [
+    "18:30",
+    "00:00"
+   ]
+  ],
+  "jue": [
+   [
+    "12:00",
+    "15:30"
+   ],
+   [
+    "18:30",
+    "00:00"
+   ]
+  ],
+  "vie": [
+   [
+    "12:00",
+    "15:30"
+   ],
+   [
+    "18:30",
+    "01:00"
+   ]
+  ],
+  "sab": [
+   [
+    "12:00",
+    "15:30"
+   ],
+   [
+    "18:30",
+    "01:00"
+   ]
+  ],
+  "dom": []
+ },
+ "reservas": {
+  "capacidad": 40,
+  "maxPersonas": 8,
+  "anticipacionMin": 60,
+  "diasAdelante": 30,
+  "duracionMin": 90,
+  "servicios": [
+   {
+    "id": "mediodia",
+    "nombre": "Mediodía",
+    "dias": [
+     "mar",
+     "mie",
+     "jue",
+     "vie",
+     "sab"
+    ],
+    "tandas": [
+     {
+      "nombre": "Mediodía",
+      "turnos": [
+       "12:00",
+       "12:30",
+       "13:00",
+       "13:30",
+       "14:00",
+       "14:30"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "noche",
+    "nombre": "Noche",
+    "dias": [
+     "mar",
+     "mie",
+     "jue",
+     "vie",
+     "sab"
+    ],
+    "tandas": [
+     {
+      "nombre": "Noche",
+      "turnos": [
+       "19:00",
+       "19:30",
+       "20:00",
+       "20:30",
+       "21:00",
+       "21:30",
+       "22:00",
+       "22:30"
+      ]
+     }
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "id": "vereda",
+    "label": "Si se puede, en la vereda"
+   },
+   {
+    "id": "festejo",
+    "label": "Venimos a festejar algo"
+   }
+  ]
+ },
+ "eventosTipos": [
+  {
+   "id": "cata",
+   "nombre": "Cata"
+  },
+  {
+   "id": "noche",
+   "nombre": "Noche especial"
+  }
+ ],
+ "eventos": [
+  {
+   "id": "cata-naranjos",
+   "tipo": "cata",
+   "nombre": "Naranjos y rosados de bodegas chicas",
+   "fecha": "2026-11-12",
+   "hora": "20:15",
+   "cupo": 20,
+   "precio": null,
+   "descripcion": "Cuatro etiquetas servidas y contadas en la mesa larga del salón, con tapeo para acompañar.",
+   "reserva": true
+  },
+  {
+   "id": "cata-regiones",
+   "tipo": "cata",
+   "nombre": "Regiones y varietales",
+   "fecha": "2026-11-26",
+   "hora": "20:15",
+   "cupo": 20,
+   "precio": null,
+   "descripcion": "Un mismo varietal de distintas zonas, lado a lado: Jujuy, Valle de Uco, San Juan y Patagonia.",
+   "reserva": true
+  },
+  {
+   "id": "cata-burbujas",
+   "tipo": "cata",
+   "nombre": "Burbujas para cerrar el año",
+   "fecha": "2026-12-10",
+   "hora": "20:15",
+   "cupo": 24,
+   "precio": null,
+   "descripcion": "Espumantes y pet nat de productores chicos para brindar antes de las fiestas.",
+   "reserva": true
+  }
+ ],
+ "pedidos": {
+  "salidas": [
+   "mercadopago",
+   "whatsapp"
+  ],
+  "tipos": [
+   "retiro"
+  ],
+  "minimo": 0,
+  "retiroHoy": {
+   "cadaMin": 15,
+   "prepMin": 20,
+   "asap": true
+  }
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  }
+ },
+ "cartaQR": {
+  "pedir": false,
+  "estilo": "marca",
+  "textos": {
+   "titulo": "La carta de Chigre",
+   "sub": "Mediodía, noche y vinos"
+  }
+ },
+ "carta": {
+  "campos": [
+   {
+    "id": "cepa",
+    "label": "Cepa"
+   },
+   {
+    "id": "zona",
+    "label": "Zona"
+   },
+   {
+    "id": "bodega",
+    "label": "Bodega"
+   },
+   {
+    "id": "nota",
+    "label": "Nota de cata",
+    "tipo": "textarea"
+   },
+   {
+    "id": "soloNoche",
+    "label": "Solo a la noche",
+    "tipo": "check",
+    "ayuda": "Se ve solo en la carta de la noche"
+   }
+  ],
+  "categorias": [
+   {
+    "id": "almuerzos",
+    "nombre": "Almuerzos",
+    "momento": "mediodia"
+   },
+   {
+    "id": "tapeo",
+    "nombre": "Tapeo"
+   },
+   {
+    "id": "pizzas",
+    "nombre": "Pizzas",
+    "momento": "noche"
+   },
+   {
+    "id": "postres",
+    "nombre": "Postres"
+   },
+   {
+    "id": "cafeteria",
+    "nombre": "Cafetería y merienda"
+   },
+   {
+    "id": "tragos",
+    "nombre": "Con alcohol"
+   },
+   {
+    "id": "sinalcohol",
+    "nombre": "Sin alcohol"
+   },
+   {
+    "id": "copa",
+    "nombre": "Vino por copa"
+   },
+   {
+    "id": "v-blancos",
+    "nombre": "Vinos blancos"
+   },
+   {
+    "id": "v-nre",
+    "nombre": "Naranjos, rosados y espumantes"
+   },
+   {
+    "id": "v-tintos",
+    "nombre": "Vinos tintos"
+   },
+   {
+    "id": "vt-blancos",
+    "nombre": "Blancos",
+    "tienda": true
+   },
+   {
+    "id": "vt-naranjos",
+    "nombre": "Naranjos",
+    "tienda": true
+   },
+   {
+    "id": "vt-rosados",
+    "nombre": "Rosados",
+    "tienda": true
+   },
+   {
+    "id": "vt-espumantes",
+    "nombre": "Espumantes",
+    "tienda": true
+   },
+   {
+    "id": "vt-tintos",
+    "nombre": "Tintos",
+    "tienda": true
+   }
+  ],
+  "productos": [
+   {
+    "id": "ensalada-con-pollo",
+    "categoria": "almuerzos",
+    "nombre": "Ensalada con pollo",
+    "descripcion": "Pechuga horneada, mix de verdes, cherries confitados, reggianito rallado, croutons",
+    "precio": 14000
+   },
+   {
+    "id": "ensalada-vegetariana",
+    "categoria": "almuerzos",
+    "nombre": "Ensalada vegetariana",
+    "descripcion": "Caponata de vegetales, mix de verdes, garbanzos, cherries confitados, muzzarella, chucrut",
+    "precio": 15000,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "ensalada-queso-azul-y-peras",
+    "categoria": "almuerzos",
+    "nombre": "Ensalada queso azul y peras",
+    "descripcion": "Mix de verdes, queso azul, peras asadas, nueces, mortadela, cebolla horneada",
+    "precio": 15000
+   },
+   {
+    "id": "ensalada-brie-y-jamon-crudo",
+    "categoria": "almuerzos",
+    "nombre": "Ensalada brie y jamón crudo",
+    "descripcion": "Mix de verdes, queso brie, jamón crudo, cherries confitados y nueces tostadas",
+    "precio": 18000
+   },
+   {
+    "id": "wrap-de-pollo",
+    "categoria": "almuerzos",
+    "nombre": "Wrap de pollo",
+    "descripcion": "Pechuga horneada, vegetales asados y mozzarella, acompañado de mix de verdes",
+    "precio": 14000
+   },
+   {
+    "id": "wrap-veggie",
+    "categoria": "almuerzos",
+    "nombre": "Wrap veggie",
+    "descripcion": "Vegetales asados, mozzarella y hummus, acompañado de mix de verdes y papas al horno",
+    "precio": 14000,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "milanesa-de-peceto",
+    "categoria": "almuerzos",
+    "nombre": "Milanesa de peceto",
+    "descripcion": "Con mix de verdes y papas al horno",
+    "precio": null,
+    "variantes": [
+     {
+      "id": "simple",
+      "nombre": "Simple",
+      "precio": 14000
+     },
+     {
+      "id": "napo",
+      "nombre": "Napolitana o con queso y cebolla",
+      "precio": 17000
+     }
+    ]
+   },
+   {
+    "id": "toston-con-palta-queso-crema-jamon-crudo-y-cherr",
+    "categoria": "almuerzos",
+    "nombre": "Tostón con palta, queso crema, jamón crudo y cherries confitados",
+    "descripcion": "",
+    "precio": 11000
+   },
+   {
+    "id": "albondigas-con-salsa-y-guarnicion",
+    "categoria": "almuerzos",
+    "nombre": "Albóndigas con salsa y guarnición",
+    "descripcion": "",
+    "precio": 15000,
+    "foto": "img/albondigas.webp"
+   },
+   {
+    "id": "empanada-de-osobuco-braseado-al-vino-tinto",
+    "categoria": "tapeo",
+    "nombre": "Empanada de osobuco braseado al vino tinto",
+    "descripcion": "La más querida del barrio",
+    "precio": 4500,
+    "foto": "img/empanadas2.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "empanada-de-humita",
+    "categoria": "tapeo",
+    "nombre": "Empanada de humita",
+    "descripcion": "",
+    "precio": 3800,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "hummus-de-garbanzos",
+    "categoria": "tapeo",
+    "nombre": "Hummus de garbanzos",
+    "descripcion": "",
+    "precio": 10000,
+    "etiquetas": [
+     "veggie"
+    ],
+    "soloNoche": true
+   },
+   {
+    "id": "tortilla-clasica",
+    "categoria": "tapeo",
+    "nombre": "Tortilla clásica",
+    "descripcion": "",
+    "precio": 11000,
+    "soloNoche": true
+   },
+   {
+    "id": "tortilla-con-queso-azul",
+    "categoria": "tapeo",
+    "nombre": "Tortilla con queso azul",
+    "descripcion": "",
+    "precio": 13000,
+    "soloNoche": true
+   },
+   {
+    "id": "falafel-base-de-hummus-y-yogur",
+    "categoria": "tapeo",
+    "nombre": "Falafel, base de hummus y yogur",
+    "descripcion": "",
+    "precio": 9500,
+    "etiquetas": [
+     "veggie"
+    ],
+    "soloNoche": true
+   },
+   {
+    "id": "faina-con-stracciatella-y-escalivada",
+    "categoria": "tapeo",
+    "nombre": "Fainá con stracciatella y escalivada",
+    "descripcion": "Morrones, berenjenas y otros vegetales asados",
+    "precio": 12000,
+    "foto": "img/faina.webp"
+   },
+   {
+    "id": "provoleta-cherries-confitados-y-gremolatta",
+    "categoria": "tapeo",
+    "nombre": "Provoleta, cherries confitados y gremolatta",
+    "descripcion": "Perejil, limón, oliva, miel, ají molido y almendras",
+    "precio": 15000
+   },
+   {
+    "id": "humita-brulee",
+    "categoria": "tapeo",
+    "nombre": "Humita brûlée",
+    "descripcion": "Humita cremosa, reggianito, azúcar quemada y salsa picante",
+    "precio": 10000,
+    "foto": "img/humita.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "soloNoche": true
+   },
+   {
+    "id": "hojaldre-con-morcilla-peras-y-queso-azul",
+    "categoria": "tapeo",
+    "nombre": "Hojaldre con morcilla, peras y queso azul",
+    "descripcion": "",
+    "precio": 13000,
+    "soloNoche": true
+   },
+   {
+    "id": "pancho",
+    "categoria": "tapeo",
+    "nombre": "Pancho",
+    "descripcion": "Chucrut, batatas pai y lactonesa",
+    "precio": 10000,
+    "soloNoche": true
+   },
+   {
+    "id": "albondigas-con-salsa-stracciatella-y-ralladura-d",
+    "categoria": "tapeo",
+    "nombre": "Albóndigas con salsa, stracciatella y ralladura de limón",
+    "descripcion": "Con pan casero",
+    "precio": 16500,
+    "foto": "img/albondigas.webp",
+    "soloNoche": true
+   },
+   {
+    "id": "berenjenas-gratinadas",
+    "categoria": "tapeo",
+    "nombre": "Berenjenas gratinadas",
+    "descripcion": "Con muzzarella, salsa de tomate y pesto",
+    "precio": 12000,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "bao-de-bondiola-braseada",
+    "categoria": "tapeo",
+    "nombre": "Bao de bondiola braseada",
+    "descripcion": "Pickle de pepino, maní picado, barbacoa casera",
+    "precio": 15500,
+    "foto": "img/bao.webp",
+    "soloNoche": true
+   },
+   {
+    "id": "burrata-con-rucula-jamon-crudo-cherries-confitad",
+    "categoria": "tapeo",
+    "nombre": "Burrata con rúcula, jamón crudo, cherries confitados y pesto",
+    "descripcion": "",
+    "precio": 24000
+   },
+   {
+    "id": "burrata-con-rucula-caponata-miel-picante-y-pista",
+    "categoria": "tapeo",
+    "nombre": "Burrata con rúcula, caponata, miel picante y pistachos",
+    "descripcion": "",
+    "precio": 22000
+   },
+   {
+    "id": "tabla-de-quesos",
+    "categoria": "tapeo",
+    "nombre": "Tabla de quesos",
+    "descripcion": "Variedad de quesos, aceitunas, almendras y pan casero. Adicional jamón crudo y salamín $4.000",
+    "precio": 23000,
+    "foto": "img/quesos.webp",
+    "soloNoche": true
+   },
+   {
+    "id": "margarita-con-cherries-confitados",
+    "categoria": "pizzas",
+    "nombre": "Margarita con cherries confitados",
+    "descripcion": "",
+    "precio": 19000,
+    "foto": "img/margarita.webp"
+   },
+   {
+    "id": "jamon-y-morrones",
+    "categoria": "pizzas",
+    "nombre": "Jamón y morrones",
+    "descripcion": "",
+    "precio": 21000
+   },
+   {
+    "id": "pepperoni",
+    "categoria": "pizzas",
+    "nombre": "Pepperoni",
+    "descripcion": "",
+    "precio": 19000
+   },
+   {
+    "id": "ricota-almendras-tostadas-romero-y-miel",
+    "categoria": "pizzas",
+    "nombre": "Ricota, almendras tostadas, romero y miel",
+    "descripcion": "",
+    "precio": 22000
+   },
+   {
+    "id": "cebolla-y-queso-azul",
+    "categoria": "pizzas",
+    "nombre": "Cebolla y queso azul",
+    "descripcion": "",
+    "precio": 21000
+   },
+   {
+    "id": "mortadela-stracciatella-pesto-y-pistachos",
+    "categoria": "pizzas",
+    "nombre": "Mortadela, stracciatella, pesto y pistachos",
+    "descripcion": "",
+    "precio": 25000,
+    "foto": "img/mortadela.webp"
+   },
+   {
+    "id": "burrata-rucula-y-jamon-crudo",
+    "categoria": "pizzas",
+    "nombre": "Burrata, rúcula y jamón crudo",
+    "descripcion": "",
+    "precio": 28000,
+    "foto": "img/crudo.webp"
+   },
+   {
+    "id": "rucula-y-jamon-crudo",
+    "categoria": "pizzas",
+    "nombre": "Rúcula y jamón crudo",
+    "descripcion": "",
+    "precio": 24000
+   },
+   {
+    "id": "el-capricho-de-el",
+    "categoria": "pizzas",
+    "nombre": "El capricho de él",
+    "descripcion": "Salsa picante y ralladura de limón",
+    "precio": 19000
+   },
+   {
+    "id": "el-capricho-de-ella",
+    "categoria": "pizzas",
+    "nombre": "El capricho de ella",
+    "descripcion": "Palmitos y salsa golf",
+    "precio": 20000
+   },
+   {
+    "id": "flan-casero",
+    "categoria": "postres",
+    "nombre": "Flan casero",
+    "descripcion": "",
+    "precio": 7000
+   },
+   {
+    "id": "queso-y-dulce",
+    "categoria": "postres",
+    "nombre": "Queso y dulce",
+    "descripcion": "",
+    "precio": 8500
+   },
+   {
+    "id": "brownie-con-nueces-y-helado-de-americana",
+    "categoria": "postres",
+    "nombre": "Brownie con nueces y helado de americana",
+    "descripcion": "",
+    "precio": 12000
+   },
+   {
+    "id": "tiramisu",
+    "categoria": "postres",
+    "nombre": "Tiramisú",
+    "descripcion": "",
+    "precio": 12000,
+    "soloNoche": true
+   },
+   {
+    "id": "espresso",
+    "categoria": "cafeteria",
+    "nombre": "Espresso",
+    "descripcion": "",
+    "precio": 2800
+   },
+   {
+    "id": "espresso-doble",
+    "categoria": "cafeteria",
+    "nombre": "Espresso doble",
+    "descripcion": "",
+    "precio": 3600
+   },
+   {
+    "id": "cortado",
+    "categoria": "cafeteria",
+    "nombre": "Cortado",
+    "descripcion": "",
+    "precio": 3500
+   },
+   {
+    "id": "cafe-con-leche",
+    "categoria": "cafeteria",
+    "nombre": "Café con leche",
+    "descripcion": "",
+    "precio": 5000
+   },
+   {
+    "id": "jarrito",
+    "categoria": "cafeteria",
+    "nombre": "Jarrito",
+    "descripcion": "",
+    "precio": 3000
+   },
+   {
+    "id": "te",
+    "categoria": "cafeteria",
+    "nombre": "Té",
+    "descripcion": "",
+    "precio": 2500
+   },
+   {
+    "id": "medialuna",
+    "categoria": "cafeteria",
+    "nombre": "Medialuna",
+    "descripcion": "",
+    "precio": 2000
+   },
+   {
+    "id": "medialuna-con-jamon-y-queso",
+    "categoria": "cafeteria",
+    "nombre": "Medialuna con jamón y queso",
+    "descripcion": "",
+    "precio": 4000
+   },
+   {
+    "id": "tostadas-con-queso-y-mermelada",
+    "categoria": "cafeteria",
+    "nombre": "Tostadas con queso y mermelada",
+    "descripcion": "",
+    "precio": 4000
+   },
+   {
+    "id": "tostado-de-jamon-y-queso",
+    "categoria": "cafeteria",
+    "nombre": "Tostado de jamón y queso",
+    "descripcion": "",
+    "precio": 7000
+   },
+   {
+    "id": "toston-con-palta-y-queso-crema",
+    "categoria": "cafeteria",
+    "nombre": "Tostón con palta y queso crema",
+    "descripcion": "",
+    "precio": 7000
+   },
+   {
+    "id": "cafe-con-leche-2-medialunas",
+    "categoria": "cafeteria",
+    "nombre": "Café con leche + 2 medialunas",
+    "descripcion": "",
+    "precio": 7000
+   },
+   {
+    "id": "cafe-con-leche-tostadas-con-mermelada-y-queso-cr",
+    "categoria": "cafeteria",
+    "nombre": "Café con leche + tostadas con mermelada y queso crema",
+    "descripcion": "",
+    "precio": 7000
+   },
+   {
+    "id": "cerveza-en-lata-500-cm",
+    "categoria": "tragos",
+    "nombre": "Cerveza en lata 500 cm³",
+    "descripcion": "Consultar opciones",
+    "precio": 7000
+   },
+   {
+    "id": "vermu",
+    "categoria": "tragos",
+    "nombre": "Vermú",
+    "descripcion": "Consultar opciones",
+    "precio": 7500
+   },
+   {
+    "id": "fernet-con-coca",
+    "categoria": "tragos",
+    "nombre": "Fernet con coca",
+    "descripcion": "",
+    "precio": 9000
+   },
+   {
+    "id": "cynar-con-pomelo",
+    "categoria": "tragos",
+    "nombre": "Cynar con pomelo",
+    "descripcion": "",
+    "precio": 8500
+   },
+   {
+    "id": "tinto-de-verano",
+    "categoria": "tragos",
+    "nombre": "Tinto de verano",
+    "descripcion": "",
+    "precio": 9500
+   },
+   {
+    "id": "gin-tonic",
+    "categoria": "tragos",
+    "nombre": "Gin tonic",
+    "descripcion": "",
+    "precio": 11000
+   },
+   {
+    "id": "aperol-spritz",
+    "categoria": "tragos",
+    "nombre": "Aperol spritz",
+    "descripcion": "",
+    "precio": 9500
+   },
+   {
+    "id": "campari-con-naranja",
+    "categoria": "tragos",
+    "nombre": "Campari con naranja",
+    "descripcion": "",
+    "precio": 9500
+   },
+   {
+    "id": "sidra-natural-750-cc",
+    "categoria": "tragos",
+    "nombre": "Sidra natural 750 cc",
+    "descripcion": "",
+    "precio": 13000
+   },
+   {
+    "id": "sidra-dulce-660-cc",
+    "categoria": "tragos",
+    "nombre": "Sidra dulce 660 cc",
+    "descripcion": "",
+    "precio": 11000
+   },
+   {
+    "id": "negroni",
+    "categoria": "tragos",
+    "nombre": "Negroni",
+    "descripcion": "",
+    "precio": 12000
+   },
+   {
+    "id": "whisky",
+    "categoria": "tragos",
+    "nombre": "Whisky",
+    "descripcion": "Consultar opciones",
+    "precio": 12000
+   },
+   {
+    "id": "agua-con-o-sin-gas",
+    "categoria": "sinalcohol",
+    "nombre": "Agua con o sin gas",
+    "descripcion": "",
+    "precio": 2000
+   },
+   {
+    "id": "gaseosa-linea-coca-350-cm",
+    "categoria": "sinalcohol",
+    "nombre": "Gaseosa línea Coca 350 cm³",
+    "descripcion": "",
+    "precio": 4200
+   },
+   {
+    "id": "agua-saborizada-500-cm",
+    "categoria": "sinalcohol",
+    "nombre": "Agua saborizada 500 cm³",
+    "descripcion": "",
+    "precio": 4200
+   },
+   {
+    "id": "limonada-vaso",
+    "categoria": "sinalcohol",
+    "nombre": "Limonada (vaso)",
+    "descripcion": "",
+    "precio": 4500
+   },
+   {
+    "id": "mocktails",
+    "categoria": "sinalcohol",
+    "nombre": "Mocktails",
+    "descripcion": "Consultar opciones",
+    "precio": 10000
+   },
+   {
+    "id": "vino-por-copa",
+    "categoria": "copa",
+    "nombre": "Vino por copa",
+    "descripcion": "Consultar opciones",
+    "precio": 7000
+   },
+   {
+    "id": "anko-torrontes",
+    "categoria": "v-blancos",
+    "nombre": "Anko · Torrontés",
+    "descripcion": "Tolombón, Valles Calchaquíes, Salta · Estancia Los Cardones",
+    "precio": 22000,
+    "cepa": "Torrontés",
+    "zona": "Tolombón, Valles Calchaquíes, Salta",
+    "bodega": "Estancia Los Cardones"
+   },
+   {
+    "id": "antro-chardonnay",
+    "categoria": "v-blancos",
+    "nombre": "Antro · Chardonnay",
+    "descripcion": "",
+    "precio": 24000,
+    "cepa": "Chardonnay",
+    "zona": "",
+    "bodega": ""
+   },
+   {
+    "id": "turbio-sauvignon-blanc",
+    "categoria": "v-blancos",
+    "nombre": "Turbio · Sauvignon Blanc",
+    "descripcion": "Las Carreras, Tupungato, Mendoza · Ravera Wines",
+    "precio": 29000,
+    "cepa": "Sauvignon Blanc",
+    "zona": "Las Carreras, Tupungato, Mendoza",
+    "bodega": "Ravera Wines"
+   },
+   {
+    "id": "cara-sur-naranjo",
+    "categoria": "v-nre",
+    "nombre": "Cara Sur · Naranjo",
+    "descripcion": "Barreal, Valle de Calingasta, San Juan · Cara Sur",
+    "precio": 36000,
+    "cepa": "Naranjo",
+    "zona": "Barreal, Valle de Calingasta, San Juan",
+    "bodega": "Cara Sur"
+   },
+   {
+    "id": "pielihueso-naranjo",
+    "categoria": "v-nre",
+    "nombre": "Pielihueso · Naranjo",
+    "descripcion": "Los Chacayes, Valle de Uco, Mendoza · Pielihueso",
+    "precio": 41000,
+    "cepa": "Naranjo",
+    "zona": "Los Chacayes, Valle de Uco, Mendoza",
+    "bodega": "Pielihueso"
+   },
+   {
+    "id": "via-revolucionaria-torrontes-brutal-naranjo",
+    "categoria": "v-nre",
+    "nombre": "Vía Revolucionaria Torrontés Brutal · Naranjo",
+    "descripcion": "Tupungato, Valle de Uco, Mendoza · Michelini Wines",
+    "precio": 40000,
+    "cepa": "Naranjo",
+    "zona": "Tupungato, Valle de Uco, Mendoza",
+    "bodega": "Michelini Wines"
+   },
+   {
+    "id": "turbio-pinkgiovese-rosado-de-sangiovese",
+    "categoria": "v-nre",
+    "nombre": "Turbio Pinkgiovese · Rosado de Sangiovese",
+    "descripcion": "Maipú, Mendoza · Ravera Wines",
+    "precio": 29000,
+    "cepa": "Rosado de Sangiovese",
+    "zona": "Maipú, Mendoza",
+    "bodega": "Ravera Wines"
+   },
+   {
+    "id": "pequenos-parceleros-criolla",
+    "categoria": "v-tintos",
+    "nombre": "Pequeños Parceleros · Criolla",
+    "descripcion": "Purmamarca, Jujuy · El Bayeh",
+    "precio": 31000,
+    "cepa": "Criolla",
+    "zona": "Purmamarca, Jujuy",
+    "bodega": "El Bayeh"
+   },
+   {
+    "id": "turbio-pinot-noir",
+    "categoria": "v-tintos",
+    "nombre": "Turbio · Pinot Noir",
+    "descripcion": "Luján de Cuyo, Mendoza · Ravera Wines",
+    "precio": 30000,
+    "cepa": "Pinot Noir",
+    "zona": "Luján de Cuyo, Mendoza",
+    "bodega": "Ravera Wines"
+   },
+   {
+    "id": "bairoletto-pinot-noir",
+    "categoria": "v-tintos",
+    "nombre": "Bairoletto · Pinot Noir",
+    "descripcion": "Luján de Cuyo, Mendoza · Bairoletto",
+    "precio": 19000,
+    "cepa": "Pinot Noir",
+    "zona": "Luján de Cuyo, Mendoza",
+    "bodega": "Bairoletto"
+   },
+   {
+    "id": "cara-sur-tinto-blend",
+    "categoria": "v-tintos",
+    "nombre": "Cara Sur Tinto · Blend",
+    "descripcion": "Barreal, Valle de Calingasta, San Juan · Cara Sur",
+    "precio": 36000,
+    "cepa": "Blend",
+    "zona": "Barreal, Valle de Calingasta, San Juan",
+    "bodega": "Cara Sur"
+   },
+   {
+    "id": "montesco-punta-negra-pinot-noir",
+    "categoria": "v-tintos",
+    "nombre": "Montesco Punta Negra · Pinot Noir",
+    "descripcion": "San Pablo, Tunuyán, Mendoza · Matías Michelini",
+    "precio": 55000,
+    "cepa": "Pinot Noir",
+    "zona": "San Pablo, Tunuyán, Mendoza",
+    "bodega": "Matías Michelini"
+   },
+   {
+    "id": "aristides-bonarda",
+    "categoria": "v-tintos",
+    "nombre": "Arístides · Bonarda",
+    "descripcion": "Maipú, Mendoza · Arístides",
+    "precio": 19000,
+    "cepa": "Bonarda",
+    "zona": "Maipú, Mendoza",
+    "bodega": "Arístides"
+   },
+   {
+    "id": "hey-malbec",
+    "categoria": "v-tintos",
+    "nombre": "Hey · Malbec",
+    "descripcion": "Luján de Cuyo, Mendoza · Riccitelli Wines",
+    "precio": 26000,
+    "cepa": "Malbec",
+    "zona": "Luján de Cuyo, Mendoza",
+    "bodega": "Riccitelli Wines"
+   },
+   {
+    "id": "puente-solanilla-malbec",
+    "categoria": "v-tintos",
+    "nombre": "Puente Solanilla · Malbec",
+    "descripcion": "Las Compuertas, Luján de Cuyo, Mendoza · Puente Solanilla",
+    "precio": 19000,
+    "cepa": "Malbec",
+    "zona": "Las Compuertas, Luján de Cuyo, Mendoza",
+    "bodega": "Puente Solanilla"
+   },
+   {
+    "id": "tempus-alba-malbec",
+    "categoria": "v-tintos",
+    "nombre": "Tempus Alba · Malbec",
+    "descripcion": "Maipú, Mendoza · 4 Gatos Locos",
+    "precio": 38000,
+    "cepa": "Malbec",
+    "zona": "Maipú, Mendoza",
+    "bodega": "4 Gatos Locos"
+   },
+   {
+    "id": "tutu-malbec",
+    "categoria": "v-tintos",
+    "nombre": "Tutu · Malbec",
+    "descripcion": "Gualtallary, Mendoza · Tutu Wines",
+    "precio": 35000,
+    "cepa": "Malbec",
+    "zona": "Gualtallary, Mendoza",
+    "bodega": "Tutu Wines"
+   },
+   {
+    "id": "socavones-ovum-reserva-malbec",
+    "categoria": "v-tintos",
+    "nombre": "Socavones Ovum Reserva · Malbec",
+    "descripcion": "Colonia Caroya, Córdoba · Terra Camiare",
+    "precio": 34000,
+    "cepa": "Malbec",
+    "zona": "Colonia Caroya, Córdoba",
+    "bodega": "Terra Camiare"
+   },
+   {
+    "id": "don-juan-nahuel-malbec",
+    "categoria": "v-tintos",
+    "nombre": "Don Juan Nahuel · Malbec",
+    "descripcion": "Lunlunta, Luján de Cuyo, Mendoza · Cielo y Tierra",
+    "precio": 42000,
+    "cepa": "Malbec",
+    "zona": "Lunlunta, Luján de Cuyo, Mendoza",
+    "bodega": "Cielo y Tierra"
+   },
+   {
+    "id": "ovum-blend",
+    "categoria": "v-blancos",
+    "nombre": "Ovum · Blend",
+    "descripcion": "Colonia Caroya, Córdoba · Terra Camiare",
+    "precio": 34000,
+    "cepa": "Blend",
+    "zona": "Colonia Caroya, Córdoba",
+    "bodega": "Terra Camiare"
+   },
+   {
+    "id": "zaha-semillon",
+    "categoria": "v-blancos",
+    "nombre": "Zaha · Semillón",
+    "descripcion": "La Consulta, Valle de Uco, Mendoza · Mil Suelos",
+    "precio": 35000,
+    "cepa": "Semillón",
+    "zona": "La Consulta, Valle de Uco, Mendoza",
+    "bodega": "Mil Suelos"
+   },
+   {
+    "id": "siete-fincas-sauvignon-blanc-dulce",
+    "categoria": "v-blancos",
+    "nombre": "Siete Fincas · Sauvignon Blanc Dulce",
+    "descripcion": "Tupungato, Mendoza · Siete Fincas",
+    "precio": 18000,
+    "cepa": "Sauvignon Blanc Dulce",
+    "zona": "Tupungato, Mendoza",
+    "bodega": "Siete Fincas"
+   },
+   {
+    "id": "hey-rose-rosado-de-malbec",
+    "categoria": "v-nre",
+    "nombre": "Hey Rosé · Rosado de Malbec",
+    "descripcion": "Luján de Cuyo, Mendoza · Riccitelli Wines",
+    "precio": 26000,
+    "cepa": "Rosado de Malbec",
+    "zona": "Luján de Cuyo, Mendoza",
+    "bodega": "Riccitelli Wines"
+   },
+   {
+    "id": "pielihueso-rosado-anfora",
+    "categoria": "v-nre",
+    "nombre": "Pielihueso · Rosado Ánfora",
+    "descripcion": "Los Chacayes, Valle de Uco, Mendoza · Pielihueso",
+    "precio": 41000,
+    "cepa": "Rosado Ánfora",
+    "zona": "Los Chacayes, Valle de Uco, Mendoza",
+    "bodega": "Pielihueso"
+   },
+   {
+    "id": "pannunzio-extra-brut-rose",
+    "categoria": "v-nre",
+    "nombre": "Pannunzio · Extra Brut Rosé",
+    "descripcion": "Barrancas, Maipú, Mendoza · Pannunzio",
+    "precio": 22000,
+    "cepa": "Extra Brut Rosé",
+    "zona": "Barrancas, Maipú, Mendoza",
+    "bodega": "Pannunzio"
+   },
+   {
+    "id": "a-lisa-malbec",
+    "categoria": "v-tintos",
+    "nombre": "A Lisa · Malbec",
+    "descripcion": "Mainqué, Río Negro · Noemía",
+    "precio": 49000,
+    "cepa": "Malbec",
+    "zona": "Mainqué, Río Negro",
+    "bodega": "Noemía"
+   },
+   {
+    "id": "manos-negras-artesano-malbec",
+    "categoria": "v-tintos",
+    "nombre": "Manos Negras Artesano · Malbec",
+    "descripcion": "Paraje Altamira, Valle de Uco, Mendoza · Manos Negras",
+    "precio": 39000,
+    "cepa": "Malbec",
+    "zona": "Paraje Altamira, Valle de Uco, Mendoza",
+    "bodega": "Manos Negras"
+   },
+   {
+    "id": "tutu-cabernet-franc",
+    "categoria": "v-tintos",
+    "nombre": "Tutu · Cabernet Franc",
+    "descripcion": "Gualtallary, Mendoza · Tutu Wines",
+    "precio": 36000,
+    "cepa": "Cabernet Franc",
+    "zona": "Gualtallary, Mendoza",
+    "bodega": "Tutu Wines"
+   },
+   {
+    "id": "riccitelli-gualtallary-cabernet-franc",
+    "categoria": "v-tintos",
+    "nombre": "Riccitelli Gualtallary · Cabernet Franc",
+    "descripcion": "Gualtallary, Mendoza · Riccitelli Wines",
+    "precio": 55000,
+    "cepa": "Cabernet Franc",
+    "zona": "Gualtallary, Mendoza",
+    "bodega": "Riccitelli Wines"
+   },
+   {
+    "id": "pleno-malbec-cabernet-sauvignon",
+    "categoria": "v-tintos",
+    "nombre": "Pleno · Malbec + Cabernet Sauvignon",
+    "descripcion": "Maipú, Mendoza · Tempus Alba",
+    "precio": 50000,
+    "cepa": "Malbec + Cabernet Sauvignon",
+    "zona": "Maipú, Mendoza",
+    "bodega": "Tempus Alba"
+   },
+   {
+    "id": "malabarista-co-fermentado-malbec-ancellotta",
+    "categoria": "v-tintos",
+    "nombre": "Malabarista Co Fermentado · Malbec + Ancellotta",
+    "descripcion": "Agrelo, Mendoza · Ravera Wines",
+    "precio": 29000,
+    "cepa": "Malbec + Ancellotta",
+    "zona": "Agrelo, Mendoza",
+    "bodega": "Ravera Wines"
+   },
+   {
+    "id": "vertebrado-cabernet-franc",
+    "categoria": "v-tintos",
+    "nombre": "Vertebrado · Cabernet Franc",
+    "descripcion": "Gualtallary, Valle de Uco, Mendoza · Viña Los Chocos",
+    "precio": 46000,
+    "cepa": "Cabernet Franc",
+    "zona": "Gualtallary, Valle de Uco, Mendoza",
+    "bodega": "Viña Los Chocos"
+   },
+   {
+    "id": "socavones-reserva-cabernet-sauvignon-franc",
+    "categoria": "v-tintos",
+    "nombre": "Socavones Reserva · Cabernet Sauvignon + Franc",
+    "descripcion": "Colonia Caroya, Córdoba · Terra Camiare",
+    "precio": 34000,
+    "cepa": "Cabernet Sauvignon + Franc",
+    "zona": "Colonia Caroya, Córdoba",
+    "bodega": "Terra Camiare"
+   },
+   {
+    "id": "zaha-cabernet-sauvignon",
+    "categoria": "v-tintos",
+    "nombre": "Zaha · Cabernet Sauvignon",
+    "descripcion": "Paraje Altamira, Valle de Uco, Mendoza · Mil Suelos",
+    "precio": 38000,
+    "cepa": "Cabernet Sauvignon",
+    "zona": "Paraje Altamira, Valle de Uco, Mendoza",
+    "bodega": "Mil Suelos"
+   },
+   {
+    "id": "pinto-verdot-petit-verdot",
+    "categoria": "v-tintos",
+    "nombre": "Pintó Verdot · Petit Verdot",
+    "descripcion": "Tunuyán, Mendoza · Pielihueso",
+    "precio": 45000,
+    "cepa": "Petit Verdot",
+    "zona": "Tunuyán, Mendoza",
+    "bodega": "Pielihueso"
+   },
+   {
+    "id": "manos-negras-brut-nature-espumante-de-chardonnay",
+    "categoria": "v-nre",
+    "nombre": "Manos Negras Brut Nature · Espumante de chardonnay",
+    "descripcion": "Tunuyán, Mendoza · Manos Negras",
+    "precio": 30000,
+    "cepa": "Espumante de chardonnay",
+    "zona": "Tunuyán, Mendoza",
+    "bodega": "Manos Negras"
+   },
+   {
+    "id": "dmv-gran-reserva-blend-petit-verdot-cabernet-fra",
+    "categoria": "v-tintos",
+    "nombre": "DMV Gran Reserva · Blend (Petit Verdot, Cabernet Franc, Malbec)",
+    "descripcion": "Maipú, Mendoza · Don Manuel Villafañe",
+    "precio": 32000,
+    "cepa": "Blend (Petit Verdot, Cabernet Franc, Malbec)",
+    "zona": "Maipú, Mendoza",
+    "bodega": "Don Manuel Villafañe"
+   },
+   {
+    "id": "anko-torrontes-2",
+    "categoria": "vt-blancos",
+    "nombre": "Anko Torrontés",
+    "descripcion": "",
+    "precio": 15000,
+    "cepa": "Torrontés",
+    "bodega": "Estancia Los Cardones",
+    "zona": "Tolombón, Valles Calchaquíes, Salta",
+    "precioMesa": 22000
+   },
+   {
+    "id": "antro-chardonnay-2",
+    "categoria": "vt-blancos",
+    "nombre": "Antro Chardonnay",
+    "descripcion": "",
+    "precio": 16900,
+    "cepa": "Chardonnay",
+    "zona": "",
+    "precioMesa": 24000
+   },
+   {
+    "id": "bianco-d-uco-bira-wines",
+    "categoria": "vt-blancos",
+    "nombre": "Bianco d'Uco Bira Wines",
+    "descripcion": "",
+    "precio": 25000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "callejon-de-las-brujas-ensamble-blanco",
+    "categoria": "vt-blancos",
+    "nombre": "Callejón de las Brujas ensamble blanco",
+    "descripcion": "",
+    "precio": 11000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "cara-sur-blend-blanco-2023",
+    "categoria": "vt-blancos",
+    "nombre": "Cara Sur Blend Blanco 2023",
+    "descripcion": "",
+    "precio": 28800,
+    "cepa": "Blend",
+    "bodega": "Cara Sur"
+   },
+   {
+    "id": "confiada-serie-5-viognier-bodega-septima",
+    "categoria": "vt-blancos",
+    "nombre": "Confiada Serie 5 Viognier - Bodega Séptima",
+    "descripcion": "",
+    "precio": 23000,
+    "cepa": "Viognier"
+   },
+   {
+    "id": "equilibrio-imperfecto-chardonnay-moscatel",
+    "categoria": "vt-blancos",
+    "nombre": "Equilibrio Imperfecto Chardonnay Moscatel",
+    "descripcion": "",
+    "precio": 28140,
+    "cepa": "Blend"
+   },
+   {
+    "id": "geje-sauvignon-blanc",
+    "categoria": "vt-blancos",
+    "nombre": "Geje Sauvignon Blanc",
+    "descripcion": "",
+    "precio": 17000,
+    "cepa": "Sauvignon Blanc"
+   },
+   {
+    "id": "manos-negras-artesano-chardonnay",
+    "categoria": "vt-blancos",
+    "nombre": "Manos Negras Artesano Chardonnay",
+    "descripcion": "",
+    "precio": 28900,
+    "cepa": "Chardonnay",
+    "bodega": "Manos Negras"
+   },
+   {
+    "id": "manos-negras-cold-soil-sauvignon-blanc",
+    "categoria": "vt-blancos",
+    "nombre": "Manos Negras Cold Soil Sauvignon Blanc",
+    "descripcion": "",
+    "precio": 15250,
+    "cepa": "Sauvignon Blanc",
+    "bodega": "Manos Negras"
+   },
+   {
+    "id": "ovum-blend-blanco",
+    "categoria": "vt-blancos",
+    "nombre": "Ovum blend blanco",
+    "descripcion": "",
+    "precio": 23700,
+    "cepa": "Blend",
+    "bodega": "Terra Camiare",
+    "zona": "Colonia Caroya, Córdoba",
+    "precioMesa": 34000
+   },
+   {
+    "id": "refran-blanc-de-noir-moscatel-chenin-malbec",
+    "categoria": "vt-blancos",
+    "nombre": "Refrán Blanc de Noir (moscatel-chenin-malbec)",
+    "descripcion": "",
+    "precio": 25000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "riccitelli-the-apple-torrontes",
+    "categoria": "vt-blancos",
+    "nombre": "Riccitelli The Apple Torrontés",
+    "descripcion": "",
+    "precio": 20000,
+    "cepa": "Torrontés",
+    "bodega": "Riccitelli Wines"
+   },
+   {
+    "id": "siete-fincas-sauvignon-blanc-dulce-2",
+    "categoria": "vt-blancos",
+    "nombre": "Siete Fincas Sauvignon Blanc Dulce",
+    "descripcion": "",
+    "precio": 12000,
+    "cepa": "Sauvignon Blanc",
+    "bodega": "Siete Fincas",
+    "zona": "Tupungato, Mendoza",
+    "precioMesa": 18000
+   },
+   {
+    "id": "turbio-chardonnay",
+    "categoria": "vt-blancos",
+    "nombre": "Turbio Chardonnay",
+    "descripcion": "",
+    "precio": 19000,
+    "cepa": "Chardonnay",
+    "bodega": "Ravera Wines"
+   },
+   {
+    "id": "turbio-sauvignon-blanc-2",
+    "categoria": "vt-blancos",
+    "nombre": "Turbio Sauvignon Blanc",
+    "descripcion": "",
+    "precio": 19000,
+    "cepa": "Sauvignon Blanc",
+    "bodega": "Ravera Wines",
+    "zona": "Las Carreras, Tupungato, Mendoza",
+    "precioMesa": 29000
+   },
+   {
+    "id": "tutu-semillon-de-tinajas",
+    "categoria": "vt-blancos",
+    "nombre": "Tutu Semillón de Tinajas",
+    "descripcion": "",
+    "precio": 29500,
+    "cepa": "Semillón",
+    "bodega": "Tutu Wines"
+   },
+   {
+    "id": "zaha-semillon-2",
+    "categoria": "vt-blancos",
+    "nombre": "Zaha Semillon",
+    "descripcion": "",
+    "precio": 29000,
+    "cepa": "Semillón",
+    "bodega": "Mil Suelos",
+    "zona": "La Consulta, Valle de Uco, Mendoza",
+    "precioMesa": 35000
+   },
+   {
+    "id": "codorniu-zero-espumante",
+    "categoria": "vt-espumantes",
+    "nombre": "Codorniú Zero Espumante",
+    "descripcion": "",
+    "precio": 25000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "kung-fu-pet-nat",
+    "categoria": "vt-espumantes",
+    "nombre": "Kung Fu Pet Nat",
+    "descripcion": "",
+    "precio": 42000,
+    "cepa": "Pet Nat"
+   },
+   {
+    "id": "las-perdices-partridge-espumante",
+    "categoria": "vt-espumantes",
+    "nombre": "Las Perdices Partridge Espumante",
+    "descripcion": "",
+    "precio": 13000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "manos-negras-espumante-brut-nature",
+    "categoria": "vt-espumantes",
+    "nombre": "Manos Negras Espumante Brut Nature",
+    "descripcion": "",
+    "precio": 23000,
+    "cepa": "Brut Nature",
+    "bodega": "Manos Negras"
+   },
+   {
+    "id": "pannunzio-extra-brut-rose-2",
+    "categoria": "vt-espumantes",
+    "nombre": "Pannunzio Extra Brut Rosé",
+    "descripcion": "",
+    "precio": 13500,
+    "cepa": "Brut Nature",
+    "bodega": "Pannunzio",
+    "zona": "Barrancas, Maipú, Mendoza",
+    "precioMesa": 22000
+   },
+   {
+    "id": "relator-espumante-pinot-noir",
+    "categoria": "vt-espumantes",
+    "nombre": "Relator Espumante Pinot Noir",
+    "descripcion": "",
+    "precio": 29500,
+    "cepa": "Pinot Noir"
+   },
+   {
+    "id": "saint-felicien-brut-nature-ed-aniversario",
+    "categoria": "vt-espumantes",
+    "nombre": "Saint Felicien Brut Nature Ed Aniversario",
+    "descripcion": "",
+    "precio": 28250,
+    "cepa": "Brut Nature"
+   },
+   {
+    "id": "aguma-naranjo-dulce",
+    "categoria": "vt-naranjos",
+    "nombre": "Aguma Naranjo dulce",
+    "descripcion": "",
+    "precio": 10000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "cara-sur-naranjo-2023",
+    "categoria": "vt-naranjos",
+    "nombre": "Cara Sur Naranjo 2023",
+    "descripcion": "",
+    "precio": 29000,
+    "cepa": "Blend",
+    "bodega": "Cara Sur",
+    "zona": "Barreal, Valle de Calingasta, San Juan",
+    "precioMesa": 36000
+   },
+   {
+    "id": "flora-by-zaha-naranjo",
+    "categoria": "vt-naranjos",
+    "nombre": "Flora by Zaha Naranjo",
+    "descripcion": "",
+    "precio": 30600,
+    "cepa": "Blend"
+   },
+   {
+    "id": "pielihueso-naranjo-2",
+    "categoria": "vt-naranjos",
+    "nombre": "Pielihueso Naranjo",
+    "descripcion": "",
+    "precio": 36000,
+    "cepa": "Blend",
+    "bodega": "Pielihueso"
+   },
+   {
+    "id": "pielihueso-naranjo-anfora",
+    "categoria": "vt-naranjos",
+    "nombre": "Pielihueso Naranjo Ánfora",
+    "descripcion": "",
+    "precio": 42000,
+    "cepa": "Blend",
+    "bodega": "Pielihueso"
+   },
+   {
+    "id": "rincon-de-los-leones-chardonnay-con-pieles",
+    "categoria": "vt-naranjos",
+    "nombre": "Rincon de los Leones Chardonnay con pieles",
+    "descripcion": "",
+    "precio": 60000,
+    "cepa": "Chardonnay"
+   },
+   {
+    "id": "solito-va-naranjo",
+    "categoria": "vt-naranjos",
+    "nombre": "Solito va Naranjo",
+    "descripcion": "",
+    "precio": 25000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "aristides-blend-rose",
+    "categoria": "vt-rosados",
+    "nombre": "Arístides blend rosé",
+    "descripcion": "",
+    "precio": 14000,
+    "cepa": "Blend",
+    "bodega": "Arístides"
+   },
+   {
+    "id": "matias-riccitelli-hey-rose-2024",
+    "categoria": "vt-rosados",
+    "nombre": "Matías Riccitelli Hey Rose 2024",
+    "descripcion": "",
+    "precio": 20000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "pielihueso-rosado-anfora-2",
+    "categoria": "vt-rosados",
+    "nombre": "Pielihueso Rosado Ánfora",
+    "descripcion": "",
+    "precio": 36000,
+    "cepa": "Blend",
+    "bodega": "Pielihueso"
+   },
+   {
+    "id": "rosa-di-rosso-bira-wines",
+    "categoria": "vt-rosados",
+    "nombre": "Rosa di Rosso Bira Wines",
+    "descripcion": "",
+    "precio": 20000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "tinto-nero-rose",
+    "categoria": "vt-rosados",
+    "nombre": "Tinto Nero Rosé",
+    "descripcion": "",
+    "precio": 14000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "turbio-pinkgiovese",
+    "categoria": "vt-rosados",
+    "nombre": "Turbio Pinkgiovese",
+    "descripcion": "",
+    "precio": 19000,
+    "cepa": "Sangiovese",
+    "bodega": "Ravera Wines",
+    "zona": "Maipú, Mendoza",
+    "precioMesa": 29000
+   },
+   {
+    "id": "aguma-carmenere",
+    "categoria": "vt-tintos",
+    "nombre": "Aguma Carmenere",
+    "descripcion": "",
+    "precio": 9000,
+    "cepa": "Carmenere"
+   },
+   {
+    "id": "aguma-syrah",
+    "categoria": "vt-tintos",
+    "nombre": "Aguma Syrah",
+    "descripcion": "",
+    "precio": 7800,
+    "cepa": "Syrah"
+   },
+   {
+    "id": "angelica-zapata-malbec-alta",
+    "categoria": "vt-tintos",
+    "nombre": "Angélica Zapata Malbec Alta",
+    "descripcion": "",
+    "precio": 42700,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "angelica-zapata-cabernet-sauvignon-alta",
+    "categoria": "vt-tintos",
+    "nombre": "Angelica Zapata Cabernet Sauvignon Alta",
+    "descripcion": "",
+    "precio": 34320,
+    "cepa": "Cabernet Sauvignon"
+   },
+   {
+    "id": "antro-bonarda",
+    "categoria": "vt-tintos",
+    "nombre": "Antro Bonarda",
+    "descripcion": "",
+    "precio": 18000,
+    "cepa": "Bonarda"
+   },
+   {
+    "id": "antro-pinot-noir",
+    "categoria": "vt-tintos",
+    "nombre": "Antro Pinot Noir",
+    "descripcion": "",
+    "precio": 18000,
+    "cepa": "Pinot Noir"
+   },
+   {
+    "id": "aristides-bonarda-2",
+    "categoria": "vt-tintos",
+    "nombre": "Arístides Bonarda",
+    "descripcion": "",
+    "precio": 14000,
+    "cepa": "Bonarda",
+    "bodega": "Arístides",
+    "zona": "Maipú, Mendoza",
+    "precioMesa": 19000
+   },
+   {
+    "id": "aristides-confidencial-cabernet-franc",
+    "categoria": "vt-tintos",
+    "nombre": "Arístides Confidencial Cabernet Franc",
+    "descripcion": "",
+    "precio": 36800,
+    "cepa": "Cabernet Franc",
+    "bodega": "Arístides"
+   },
+   {
+    "id": "aristides-desterrado",
+    "categoria": "vt-tintos",
+    "nombre": "Arístides Desterrado",
+    "descripcion": "",
+    "precio": 25000,
+    "cepa": "Blend",
+    "bodega": "Arístides"
+   },
+   {
+    "id": "aristides-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Arístides Malbec",
+    "descripcion": "",
+    "precio": 14000,
+    "cepa": "Malbec",
+    "bodega": "Arístides"
+   },
+   {
+    "id": "aristides-partida-unica-syrah",
+    "categoria": "vt-tintos",
+    "nombre": "Arístides Partida Única Syrah",
+    "descripcion": "",
+    "precio": 32900,
+    "cepa": "Syrah",
+    "bodega": "Arístides"
+   },
+   {
+    "id": "bairoletto-pinot-noir-2",
+    "categoria": "vt-tintos",
+    "nombre": "Bairoletto Pinot Noir",
+    "descripcion": "",
+    "precio": 12000,
+    "cepa": "Pinot Noir",
+    "bodega": "Bairoletto",
+    "zona": "Luján de Cuyo, Mendoza",
+    "precioMesa": 19000
+   },
+   {
+    "id": "caliche-bonarda-2020",
+    "categoria": "vt-tintos",
+    "nombre": "Caliche bonarda 2020",
+    "descripcion": "",
+    "precio": 20000,
+    "cepa": "Bonarda"
+   },
+   {
+    "id": "callejon-de-las-brujas-carmenere",
+    "categoria": "vt-tintos",
+    "nombre": "Callejón de las Brujas Carmenere",
+    "descripcion": "",
+    "precio": 11000,
+    "cepa": "Carmenere"
+   },
+   {
+    "id": "callejon-de-las-brujas-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Callejón de las Brujas Malbec",
+    "descripcion": "",
+    "precio": 12000,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "cara-sur-pergolas-criolla-tinta",
+    "categoria": "vt-tintos",
+    "nombre": "Cara Sur Pérgolas Criolla Tinta",
+    "descripcion": "",
+    "precio": 22000,
+    "cepa": "Criolla",
+    "bodega": "Cara Sur"
+   },
+   {
+    "id": "cara-sur-blend-tinto-2022",
+    "categoria": "vt-tintos",
+    "nombre": "Cara Sur Blend Tinto 2022",
+    "descripcion": "",
+    "precio": 28000,
+    "cepa": "Blend",
+    "bodega": "Cara Sur",
+    "zona": "Barreal, Valle de Calingasta, San Juan",
+    "precioMesa": 36000
+   },
+   {
+    "id": "casa-tano-cabernet-franc",
+    "categoria": "vt-tintos",
+    "nombre": "Casa Tano Cabernet Franc",
+    "descripcion": "",
+    "precio": 35500,
+    "cepa": "Cabernet Franc"
+   },
+   {
+    "id": "confiado-serie-5-malbec-septima",
+    "categoria": "vt-tintos",
+    "nombre": "Confiado Serie 5 Malbec Séptima",
+    "descripcion": "",
+    "precio": 24000,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "correntoso-pinot-noir",
+    "categoria": "vt-tintos",
+    "nombre": "Correntoso Pinot Noir",
+    "descripcion": "",
+    "precio": 25000,
+    "cepa": "Pinot Noir"
+   },
+   {
+    "id": "credo-malbec-el-peral-2021",
+    "categoria": "vt-tintos",
+    "nombre": "Credo Malbec El Peral 2021",
+    "descripcion": "",
+    "precio": 95000,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "don-manuel-villafane-gran-reserva-blend",
+    "categoria": "vt-tintos",
+    "nombre": "Don Manuel Villafañe Gran Reserva Blend",
+    "descripcion": "",
+    "precio": 27000,
+    "cepa": "Blend",
+    "bodega": "Cielo y Tierra"
+   },
+   {
+    "id": "don-bicho-cabernet-franc",
+    "categoria": "vt-tintos",
+    "nombre": "Don Bicho Cabernet Franc",
+    "descripcion": "",
+    "precio": 21000,
+    "cepa": "Cabernet Franc",
+    "bodega": "Cielo y Tierra"
+   },
+   {
+    "id": "don-juan-nahuel-malbec-2",
+    "categoria": "vt-tintos",
+    "nombre": "Don Juan Nahuel Malbec",
+    "descripcion": "",
+    "precio": 36400,
+    "cepa": "Malbec",
+    "bodega": "Cielo y Tierra",
+    "zona": "Lunlunta, Luján de Cuyo, Mendoza",
+    "precioMesa": 42000
+   },
+   {
+    "id": "don-manuel-villafane-cabernet-sauvignon-reserva",
+    "categoria": "vt-tintos",
+    "nombre": "Don Manuel Villafañe Cabernet Sauvignon Reserva",
+    "descripcion": "",
+    "precio": 14000,
+    "cepa": "Cabernet Sauvignon",
+    "bodega": "Cielo y Tierra"
+   },
+   {
+    "id": "don-manuel-villafane-estate-franc-verdot",
+    "categoria": "vt-tintos",
+    "nombre": "Don Manuel Villafañe Estate Franc + Verdot",
+    "descripcion": "",
+    "precio": 10000,
+    "cepa": "Blend",
+    "bodega": "Cielo y Tierra"
+   },
+   {
+    "id": "dv-catena-cabernet-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "DV Catena Cabernet Malbec",
+    "descripcion": "",
+    "precio": 21000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "anko-flor-de-cardon-cabernet-sauvignon",
+    "categoria": "vt-tintos",
+    "nombre": "Anko Flor de Cardon Cabernet Sauvignon",
+    "descripcion": "",
+    "precio": 16250,
+    "cepa": "Cabernet Sauvignon",
+    "bodega": "Estancia Los Cardones"
+   },
+   {
+    "id": "tigerstone-garnacha-2023",
+    "categoria": "vt-tintos",
+    "nombre": "Tigerstone Garnacha 2023",
+    "descripcion": "",
+    "precio": 27000,
+    "cepa": "Garnacha"
+   },
+   {
+    "id": "el-bayeh-finca-ollantay-blend",
+    "categoria": "vt-tintos",
+    "nombre": "El Bayeh Finca Ollantay Blend",
+    "descripcion": "",
+    "precio": 27000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "el-enemigo-cabernet-franc",
+    "categoria": "vt-tintos",
+    "nombre": "El Enemigo Cabernet Franc",
+    "descripcion": "",
+    "precio": 29750,
+    "cepa": "Cabernet Franc"
+   },
+   {
+    "id": "equilibrio-imperfecto-blend-de-tintas",
+    "categoria": "vt-tintos",
+    "nombre": "Equilibrio Imperfecto blend de tintas",
+    "descripcion": "",
+    "precio": 28140,
+    "cepa": "Blend"
+   },
+   {
+    "id": "equilibrio-imperfecto-criolla",
+    "categoria": "vt-tintos",
+    "nombre": "Equilibrio Imperfecto Criolla",
+    "descripcion": "",
+    "precio": 34125,
+    "cepa": "Criolla"
+   },
+   {
+    "id": "gata-flora-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Gata Flora Malbec",
+    "descripcion": "",
+    "precio": 13000,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "gouguenheim-estaciones-cabernet-sauvignon",
+    "categoria": "vt-tintos",
+    "nombre": "Gouguenheim Estaciones Cabernet Sauvignon",
+    "descripcion": "",
+    "precio": 13000,
+    "cepa": "Cabernet Sauvignon"
+   },
+   {
+    "id": "gouguenheim-estaciones-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Gouguenheim Estaciones Malbec",
+    "descripcion": "",
+    "precio": 13000,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "gran-enemigo-corte-cab-fran-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Gran Enemigo Corte Cab Fran Malbec",
+    "descripcion": "",
+    "precio": 66200,
+    "cepa": "Blend"
+   },
+   {
+    "id": "la-pesca-del-dia-chacho",
+    "categoria": "vt-tintos",
+    "nombre": "La Pesca del Día Chacho",
+    "descripcion": "",
+    "precio": 22000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "la-puerta-syrah",
+    "categoria": "vt-tintos",
+    "nombre": "La Puerta Syrah",
+    "descripcion": "",
+    "precio": 9000,
+    "cepa": "Syrah"
+   },
+   {
+    "id": "malabarista-cofermentado-1-malbec-petit-verdot",
+    "categoria": "vt-tintos",
+    "nombre": "Malabarista cofermentado 1 malbec + petit verdot",
+    "descripcion": "",
+    "precio": 21000,
+    "cepa": "Blend",
+    "bodega": "Ravera Wines"
+   },
+   {
+    "id": "malabarista-cofermentado-3-malbec-ancellota",
+    "categoria": "vt-tintos",
+    "nombre": "Malabarista Cofermentado 3 (malbec/ancellota)",
+    "descripcion": "",
+    "precio": 21000,
+    "cepa": "Blend",
+    "bodega": "Ravera Wines"
+   },
+   {
+    "id": "manos-negras-artesano-malbec-2021",
+    "categoria": "vt-tintos",
+    "nombre": "Manos Negras Artesano Malbec 2021",
+    "descripcion": "",
+    "precio": 29300,
+    "cepa": "Malbec",
+    "bodega": "Manos Negras",
+    "zona": "Paraje Altamira, Valle de Uco, Mendoza",
+    "precioMesa": 39000
+   },
+   {
+    "id": "manos-negras-pinot-noir-2024",
+    "categoria": "vt-tintos",
+    "nombre": "Manos Negras Pinot Noir 2024",
+    "descripcion": "",
+    "precio": 17800,
+    "cepa": "Pinot Noir",
+    "bodega": "Manos Negras"
+   },
+   {
+    "id": "manos-negras-red-soil-pinot-noir-2023",
+    "categoria": "vt-tintos",
+    "nombre": "Manos Negras Red Soil Pinot Noir 2023",
+    "descripcion": "",
+    "precio": 21000,
+    "cepa": "Pinot Noir",
+    "bodega": "Manos Negras"
+   },
+   {
+    "id": "matias-michelini-punta-negra-pinot-noir-2023",
+    "categoria": "vt-tintos",
+    "nombre": "Matias Michelini Punta Negra Pinot Noir 2023",
+    "descripcion": "",
+    "precio": 49500,
+    "cepa": "Pinot Noir"
+   },
+   {
+    "id": "miau-sin-sulfitos-malbec-4-gatos-locos",
+    "categoria": "vt-tintos",
+    "nombre": "Miau sin sulfitos Malbec - 4 Gatos Locos",
+    "descripcion": "",
+    "precio": 21000,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "nicolo-brunetto-bira-wines",
+    "categoria": "vt-tintos",
+    "nombre": "Nicoló Brunetto Bira Wines",
+    "descripcion": "",
+    "precio": 33000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "ovum-cabernet-franc",
+    "categoria": "vt-tintos",
+    "nombre": "Ovum Cabernet Franc",
+    "descripcion": "",
+    "precio": 29000,
+    "cepa": "Cabernet Franc",
+    "bodega": "Terra Camiare"
+   },
+   {
+    "id": "ovum-reserva-malbec-terra-camiare",
+    "categoria": "vt-tintos",
+    "nombre": "Ovum reserva Malbec - Terra Camiare",
+    "descripcion": "",
+    "precio": 29000,
+    "cepa": "Malbec",
+    "bodega": "Terra Camiare"
+   },
+   {
+    "id": "pannunzio-gran-reserva-malbec-2017",
+    "categoria": "vt-tintos",
+    "nombre": "Pannunzio Gran Reserva Malbec 2017",
+    "descripcion": "",
+    "precio": 30000,
+    "cepa": "Malbec",
+    "bodega": "Pannunzio"
+   },
+   {
+    "id": "paso-a-paso-bonarda-organico",
+    "categoria": "vt-tintos",
+    "nombre": "Paso a Paso Bonarda Orgánico",
+    "descripcion": "",
+    "precio": 22400,
+    "cepa": "Bonarda"
+   },
+   {
+    "id": "pequenos-enganos-1-clarete",
+    "categoria": "vt-tintos",
+    "nombre": "Pequeños Engaños 1 Clarete",
+    "descripcion": "",
+    "precio": 25200,
+    "cepa": "Clarete",
+    "bodega": "El Bayeh"
+   },
+   {
+    "id": "pequenos-enganos-2-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Pequeños engaños 2 Malbec",
+    "descripcion": "",
+    "precio": 25200,
+    "cepa": "Malbec",
+    "bodega": "El Bayeh"
+   },
+   {
+    "id": "pequenos-enganos-3-cabernet-franc",
+    "categoria": "vt-tintos",
+    "nombre": "Pequeños Engaños 3 Cabernet Franc",
+    "descripcion": "",
+    "precio": 25000,
+    "cepa": "Cabernet Franc",
+    "bodega": "El Bayeh"
+   },
+   {
+    "id": "pequenos-parceleros-criolla-maimara",
+    "categoria": "vt-tintos",
+    "nombre": "Pequeños Parceleros Criolla Maimará",
+    "descripcion": "",
+    "precio": 23000,
+    "cepa": "Criolla",
+    "bodega": "El Bayeh",
+    "zona": "Purmamarca, Jujuy",
+    "precioMesa": 31000
+   },
+   {
+    "id": "pielihueso-pinto-verdot",
+    "categoria": "vt-tintos",
+    "nombre": "Pielihueso Pinto Verdot",
+    "descripcion": "",
+    "precio": 38000,
+    "cepa": "Petit Verdot",
+    "bodega": "Pielihueso"
+   },
+   {
+    "id": "pielihueso-tinto-de-los-sauces",
+    "categoria": "vt-tintos",
+    "nombre": "Pielihueso Tinto de los Sauces",
+    "descripcion": "",
+    "precio": 24000,
+    "cepa": "Blend",
+    "bodega": "Pielihueso"
+   },
+   {
+    "id": "pleno-malbec-cabernet-suav-tempus-alba",
+    "categoria": "vt-tintos",
+    "nombre": "Pleno Malbec + Cabernet Suav- Tempus Alba",
+    "descripcion": "",
+    "precio": 50000,
+    "cepa": "Blend",
+    "bodega": "Tempus Alba",
+    "zona": "Maipú, Mendoza",
+    "precioMesa": 50000
+   },
+   {
+    "id": "prisma-cabernet-suav-penedo-borges",
+    "categoria": "vt-tintos",
+    "nombre": "Prisma Cabernet Suav - Penedo Borges",
+    "descripcion": "",
+    "precio": 23400,
+    "cepa": "Cabernet Sauvignon"
+   },
+   {
+    "id": "puente-solanilla-blend",
+    "categoria": "vt-tintos",
+    "nombre": "Puente Solanilla Blend",
+    "descripcion": "",
+    "precio": 12000,
+    "cepa": "Blend",
+    "bodega": "Puente Solanilla"
+   },
+   {
+    "id": "puente-solanilla-bonarda",
+    "categoria": "vt-tintos",
+    "nombre": "Puente Solanilla Bonarda",
+    "descripcion": "",
+    "precio": 12000,
+    "cepa": "Bonarda",
+    "bodega": "Puente Solanilla"
+   },
+   {
+    "id": "puente-solanilla-cabernet-franc",
+    "categoria": "vt-tintos",
+    "nombre": "Puente Solanilla Cabernet Franc",
+    "descripcion": "",
+    "precio": 12000,
+    "cepa": "Cabernet Franc",
+    "bodega": "Puente Solanilla"
+   },
+   {
+    "id": "puente-solanilla-malbec-2",
+    "categoria": "vt-tintos",
+    "nombre": "Puente Solanilla Malbec",
+    "descripcion": "",
+    "precio": 12000,
+    "cepa": "Malbec",
+    "bodega": "Puente Solanilla",
+    "zona": "Las Compuertas, Luján de Cuyo, Mendoza",
+    "precioMesa": 19000
+   },
+   {
+    "id": "puente-solanilla-petit-verdot",
+    "categoria": "vt-tintos",
+    "nombre": "Puente Solanilla Petit Verdot",
+    "descripcion": "",
+    "precio": 12000,
+    "cepa": "Petit Verdot",
+    "bodega": "Puente Solanilla"
+   },
+   {
+    "id": "riccitelli-gualtallary-cabernet-franc-2",
+    "categoria": "vt-tintos",
+    "nombre": "Riccitelli Gualtallary Cabernet Franc",
+    "descripcion": "",
+    "precio": 51500,
+    "cepa": "Cabernet Franc",
+    "bodega": "Riccitelli Wines",
+    "zona": "Gualtallary, Mendoza",
+    "precioMesa": 55000
+   },
+   {
+    "id": "riccitelli-hey-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Riccitelli Hey Malbec",
+    "descripcion": "",
+    "precio": 20000,
+    "cepa": "Malbec",
+    "bodega": "Riccitelli Wines"
+   },
+   {
+    "id": "riccitelli-the-apple-cabernet-sauvignon-2020",
+    "categoria": "vt-tintos",
+    "nombre": "Riccitelli The Apple Cabernet Sauvignon 2020",
+    "descripcion": "",
+    "precio": 31000,
+    "cepa": "Cabernet Sauvignon",
+    "bodega": "Riccitelli Wines"
+   },
+   {
+    "id": "riccitelli-the-party-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Riccitelli The Party Malbec",
+    "descripcion": "",
+    "precio": 30600,
+    "cepa": "Malbec",
+    "bodega": "Riccitelli Wines"
+   },
+   {
+    "id": "saint-felicien-cabernet-sauvignon",
+    "categoria": "vt-tintos",
+    "nombre": "Saint Felicien Cabernet Sauvignon",
+    "descripcion": "",
+    "precio": 14450,
+    "cepa": "Cabernet Sauvignon"
+   },
+   {
+    "id": "senor-ravera-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Señor Ravera Malbec",
+    "descripcion": "",
+    "precio": 31500,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "septima-gran-reserva-blend",
+    "categoria": "vt-tintos",
+    "nombre": "Séptima Gran Reserva Blend",
+    "descripcion": "",
+    "precio": 45000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "septima-obra-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Séptima Obra Malbec",
+    "descripcion": "",
+    "precio": 21000,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "septima-obra-pinot-noir",
+    "categoria": "vt-tintos",
+    "nombre": "Séptima Obra Pinot Noir",
+    "descripcion": "",
+    "precio": 20000,
+    "cepa": "Pinot Noir"
+   },
+   {
+    "id": "septima-tierra-chacayes",
+    "categoria": "vt-tintos",
+    "nombre": "Séptima Tierra Chacayes",
+    "descripcion": "",
+    "precio": 26000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "socavones-reserva-cabernet-sauvignon-cabernet-fr",
+    "categoria": "vt-tintos",
+    "nombre": "Socavones Reserva - Cabernet Sauvignon + Cabernet Franc - Terra Camiare",
+    "descripcion": "",
+    "precio": 25000,
+    "cepa": "Blend",
+    "bodega": "Terra Camiare",
+    "zona": "Colonia Caroya, Córdoba",
+    "precioMesa": 34000
+   },
+   {
+    "id": "solito-va-cabernet-franc",
+    "categoria": "vt-tintos",
+    "nombre": "Solito Va Cabernet Franc",
+    "descripcion": "",
+    "precio": 16500,
+    "cepa": "Cabernet Franc"
+   },
+   {
+    "id": "tanito-bira-wines",
+    "categoria": "vt-tintos",
+    "nombre": "Tanito Bira Wines",
+    "descripcion": "",
+    "precio": 20000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "tano-bira-wines",
+    "categoria": "vt-tintos",
+    "nombre": "Tano Bira Wines",
+    "descripcion": "",
+    "precio": 49000,
+    "cepa": "Blend"
+   },
+   {
+    "id": "teho-el-corte-2020",
+    "categoria": "vt-tintos",
+    "nombre": "Teho El Corte 2020",
+    "descripcion": "",
+    "precio": 40540,
+    "cepa": "Blend"
+   },
+   {
+    "id": "teho-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Teho Malbec",
+    "descripcion": "",
+    "precio": 40540,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "tempus-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Tempus Malbec",
+    "descripcion": "",
+    "precio": 29700,
+    "cepa": "Malbec",
+    "bodega": "4 Gatos Locos"
+   },
+   {
+    "id": "terrasabbia-gran-malbec",
+    "categoria": "vt-tintos",
+    "nombre": "Terrasabbia Gran Malbec",
+    "descripcion": "",
+    "precio": 19500,
+    "cepa": "Malbec"
+   },
+   {
+    "id": "terrasabbia-gran-tannat",
+    "categoria": "vt-tintos",
+    "nombre": "Terrasabbia Gran Tannat",
+    "descripcion": "",
+    "precio": 19500,
+    "cepa": "Tannat"
+   },
+   {
+    "id": "tinto-de-mi-pueblo-chacho",
+    "categoria": "vt-tintos",
+    "nombre": "Tinto de mi Pueblo Chacho",
+    "descripcion": "",
+    "precio": 24800,
+    "cepa": "Blend"
+   },
+   {
+    "id": "tinto-nero-sangiovese",
+    "categoria": "vt-tintos",
+    "nombre": "Tinto Nero Sangiovese",
+    "descripcion": "",
+    "precio": 13100,
+    "cepa": "Sangiovese"
+   },
+   {
+    "id": "turbio-garnacha",
+    "categoria": "vt-tintos",
+    "nombre": "Turbio Garnacha",
+    "descripcion": "",
+    "precio": 21000,
+    "cepa": "Garnacha",
+    "bodega": "Ravera Wines"
+   },
+   {
+    "id": "tutu-cabernet-franc-2",
+    "categoria": "vt-tintos",
+    "nombre": "Tutu Cabernet Franc",
+    "descripcion": "",
+    "precio": 31500,
+    "cepa": "Cabernet Franc",
+    "bodega": "Tutu Wines",
+    "zona": "Gualtallary, Mendoza",
+    "precioMesa": 36000
+   },
+   {
+    "id": "tutu-malbec-2",
+    "categoria": "vt-tintos",
+    "nombre": "Tutu malbec",
+    "descripcion": "",
+    "precio": 28000,
+    "cepa": "Malbec",
+    "bodega": "Tutu Wines",
+    "zona": "Gualtallary, Mendoza",
+    "precioMesa": 35000
+   },
+   {
+    "id": "vertebrado-cabernet-franc-los-chocos",
+    "categoria": "vt-tintos",
+    "nombre": "Vertebrado Cabernet Franc Los Chocos",
+    "descripcion": "",
+    "precio": 40000,
+    "cepa": "Cabernet Franc",
+    "bodega": "Viña Los Chocos",
+    "zona": "Gualtallary, Valle de Uco, Mendoza",
+    "precioMesa": 46000
+   },
+   {
+    "id": "via-revolucionaria-criolla-grande-matias-micheli",
+    "categoria": "vt-tintos",
+    "nombre": "Vía Revolucionaria Criolla Grande Matías Michelini",
+    "descripcion": "",
+    "precio": 28000,
+    "cepa": "Criolla",
+    "bodega": "Michelini Wines"
+   },
+   {
+    "id": "zaha-cabernet-sauvignon-2020",
+    "categoria": "vt-tintos",
+    "nombre": "Zaha Cabernet Sauvignon 2020",
+    "descripcion": "",
+    "precio": 32700,
+    "cepa": "Cabernet Sauvignon",
+    "bodega": "Mil Suelos",
+    "zona": "Paraje Altamira, Valle de Uco, Mendoza",
+    "precioMesa": 38000
+   },
+   {
+    "id": "zaha-el-corte-2021",
+    "categoria": "vt-tintos",
+    "nombre": "Zaha El Corte 2021",
+    "descripcion": "",
+    "precio": 32700,
+    "cepa": "Blend",
+    "bodega": "Mil Suelos"
+   }
+  ]
+ },
+ "textos": {
+  "tuPedido": "Tu cajón",
+  "verPedido": "Ver el cajón",
+  "carritoVacio": "El cajón está vacío.",
+  "carritoVacioSub": "Sumá vinos de la pared o algo del tapeo para llevar.",
+  "agregar": "Sumar",
+  "retiro": "Retiro en Ramallo 2904",
+  "reservarMesa": "Guardame la mesa",
+  "confirmarReserva": "Guardame la mesa",
+  "pedidoListo": "¡Listo! Te esperamos en la esquina.",
+  "enviarPedido": "Paso a buscarlo"
+ }
+}
