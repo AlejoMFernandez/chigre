@@ -64,7 +64,11 @@
       copa.style.setProperty('--lleno', max > 0 ? Math.min(1, y / max).toFixed(3) : 0);
     }
   }
-  window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(alScroll); } }, { passive: true });
+  var tScroll = 0;
+  window.addEventListener('scroll', function () {
+    if (!tick) { tick = true; requestAnimationFrame(alScroll); }
+    d.classList.add('scrolleando'); clearTimeout(tScroll); tScroll = setTimeout(function () { d.classList.remove('scrolleando'); }, 1400);
+  }, { passive: true });
   alScroll();
 
   /* ---------- menú del celu ---------- */

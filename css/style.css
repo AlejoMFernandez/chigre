@@ -182,13 +182,13 @@ html.js .hero.visto .precio-mano { opacity: 1; transform: rotate(var(--r)); tran
 .hoy { background: var(--hb); padding: 8px 0 0; }
 .hoy__fila { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 16px 20px 8px; overscroll-behavior-x: contain; }
 .hoy__fila::-webkit-scrollbar { display: none; }
-.hoy__card { flex: 0 0 82%; scroll-snap-align: start; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px; background: var(--vino); color: var(--crema); text-decoration: none; min-height: 128px; }
+.hoy__card { flex: 0 0 86%; scroll-snap-align: start; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px; background: var(--vino); color: var(--crema); text-decoration: none; min-height: 128px; }
 .hoy__card:nth-child(2) { background: var(--noche); }
 html[data-momento="noche"] .hoy__card:nth-child(2) { background: var(--noche2); box-shadow: inset 0 0 0 1px #3A3134; }
 .hoy__card:nth-child(3) { background: var(--cartel); }
 .hoy__k { color: var(--rosa); font-size: 12px; }
 .hoy__card:nth-child(3) .hoy__k { color: #FFE1E1; }
-.hoy__estado { font: 400 22px/1.2 var(--f-t); }
+.hoy__estado { font: 400 21px/1.2 var(--f-t); }
 @media (min-width: 768px) { .hoy__estado { font-size: 25px; } }
 .hoy__sub { font-size: 15px; color: #F1DDE6; }
 .hoy__sub a { color: #fff; font-weight: 700; }
@@ -298,6 +298,7 @@ html[data-momento="noche"] .hoy__card:nth-child(2) { background: var(--noche2); 
 .ficha-mesa__nom { font: 400 20px/1.15 var(--f-t); color: var(--vino); }
 .ficha-mesa__desc { font-size: 13px; line-height: 1.45; color: var(--gris); }
 .ficha-mesa__pie { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; }
+@media (max-width: 899px) { .ficha-mesa__pie { flex-direction: row-reverse; justify-content: flex-end; gap: 16px; } .mesa { padding-bottom: calc(var(--aire) + 40px); } }
 .ficha-mesa__pie b { color: var(--vino); }
 .ficha-mesa .kit-add { min-height: 44px; background: var(--cartel); color: #fff; border-color: var(--cartel); font-weight: 700; }
 .ficha-mesa .kit-step { background: var(--cartel); border-color: var(--cartel); }
@@ -517,18 +518,19 @@ html[data-momento="noche"] .hoy__card:nth-child(2) { background: var(--noche2); 
 .llegar__datos .sec__k { margin-bottom: 8px; }
 .horarios { list-style: none; margin: 0; padding: 0; font-size: 15px; }
 .horarios li { display: flex; justify-content: space-between; gap: 14px; padding: 6px 0; border-bottom: 1px solid var(--linea); }
-.horarios li.hoy { font-weight: 700; color: var(--vino); }
+.horarios li.es-hoy { font-weight: 700; color: var(--vino); }
+.nw { white-space: nowrap; }
 .horarios li span:last-child { text-align: right; }
 @media (min-width: 900px) {
   .llegar__grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(40px, 5vw, 80px); align-items: start; }
   .llegar__form { display: block; }
   .llegar__btn-celu { display: none; }
   .llegar__datos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .llegar__datos > div:nth-child(2) { grid-row: span 2; }
+  .llegar__datos > div:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
 }
 
 /* ---------- pie ---------- */
-.pie { background: var(--vino); color: var(--crema); padding: 72px 0 calc(28px + env(safe-area-inset-bottom)); }
+.pie { background: var(--vino); color: var(--crema); padding: 72px 0 calc(96px + env(safe-area-inset-bottom)); }
 .pie__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; }
 .pie__marca img:first-child { width: 150px; }
 .pie__marca p { margin-top: 10px; color: #F1DDE6; }
@@ -547,6 +549,8 @@ html[data-momento="noche"] .hoy__card:nth-child(2) { background: var(--noche2); 
 @media (min-width: 1024px) { .kit-fab { display: none !important; } }
 .kit-demo-pill { border-radius: 0 !important; }
 html:not(.pasa-hero) .kit-demo-pill { opacity: 0 !important; pointer-events: none; }
+.kit-demo-pill { transition: opacity .3s, transform .3s !important; }
+@media (max-width: 1023px) { html.scrolleando .kit-demo-pill { opacity: 0 !important; transform: translateY(12px) !important; pointer-events: none; } }
 html.menu-abierto .kit-fab, html.menu-abierto .kit-demo-pill, html.ficha-abierta .kit-fab, html.ficha-abierta .kit-demo-pill, html.kit-lock .kit-demo-pill { opacity: 0 !important; pointer-events: none; }
 .llegar__form .kit-resv { padding: 0; }
 .kit-seg--serv label:has(input[value^="ev-"]:disabled) { display: none; }

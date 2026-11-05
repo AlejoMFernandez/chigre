@@ -181,12 +181,12 @@
   {
    "id": "cata-naranjos",
    "tipo": "cata",
-   "nombre": "Naranjos y rosados de bodegas chicas",
+   "nombre": "Naranjos y rosados",
    "fecha": "2026-11-12",
    "hora": "20:15",
    "cupo": 20,
    "precio": null,
-   "descripcion": "Cuatro etiquetas servidas y contadas en la mesa larga del salón, con tapeo para acompañar.",
+   "descripcion": "Bodegas chicas: cuatro etiquetas servidas y contadas en la mesa larga del salón, con tapeo para acompañar.",
    "reserva": true
   },
   {
@@ -203,7 +203,7 @@
   {
    "id": "cata-burbujas",
    "tipo": "cata",
-   "nombre": "Burbujas para cerrar el año",
+   "nombre": "Burbujas de fin de año",
    "fecha": "2026-12-10",
    "hora": "20:15",
    "cupo": 24,
@@ -1271,6 +1271,7 @@
     "nombre": "Anko Torrontés",
     "descripcion": "",
     "precio": 15000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Torrontés",
     "bodega": "Estancia Los Cardones",
     "zona": "Tolombón, Valles Calchaquíes, Salta",
@@ -1282,6 +1283,7 @@
     "nombre": "Antro Chardonnay",
     "descripcion": "",
     "precio": 16900,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Chardonnay",
     "zona": "",
     "precioMesa": 24000
@@ -1292,6 +1294,7 @@
     "nombre": "Bianco d'Uco Bira Wines",
     "descripcion": "",
     "precio": 25000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Blend"
    },
    {
@@ -1300,6 +1303,7 @@
     "nombre": "Callejón de las Brujas ensamble blanco",
     "descripcion": "",
     "precio": 11000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Blend"
    },
    {
@@ -1308,6 +1312,7 @@
     "nombre": "Cara Sur Blend Blanco 2023",
     "descripcion": "",
     "precio": 28800,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Blend",
     "bodega": "Cara Sur"
    },
@@ -1317,6 +1322,7 @@
     "nombre": "Confiada Serie 5 Viognier - Bodega Séptima",
     "descripcion": "",
     "precio": 23000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Viognier"
    },
    {
@@ -1325,6 +1331,7 @@
     "nombre": "Equilibrio Imperfecto Chardonnay Moscatel",
     "descripcion": "",
     "precio": 28140,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Blend"
    },
    {
@@ -1333,6 +1340,7 @@
     "nombre": "Geje Sauvignon Blanc",
     "descripcion": "",
     "precio": 17000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Sauvignon Blanc"
    },
    {
@@ -1341,6 +1349,7 @@
     "nombre": "Manos Negras Artesano Chardonnay",
     "descripcion": "",
     "precio": 28900,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Chardonnay",
     "bodega": "Manos Negras"
    },
@@ -1350,6 +1359,7 @@
     "nombre": "Manos Negras Cold Soil Sauvignon Blanc",
     "descripcion": "",
     "precio": 15250,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Sauvignon Blanc",
     "bodega": "Manos Negras"
    },
@@ -1359,6 +1369,7 @@
     "nombre": "Ovum blend blanco",
     "descripcion": "",
     "precio": 23700,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Blend",
     "bodega": "Terra Camiare",
     "zona": "Colonia Caroya, Córdoba",
@@ -1370,6 +1381,7 @@
     "nombre": "Refrán Blanc de Noir (moscatel-chenin-malbec)",
     "descripcion": "",
     "precio": 25000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Blend"
    },
    {
@@ -1378,6 +1390,7 @@
     "nombre": "Riccitelli The Apple Torrontés",
     "descripcion": "",
     "precio": 20000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Torrontés",
     "bodega": "Riccitelli Wines"
    },
@@ -1387,6 +1400,7 @@
     "nombre": "Siete Fincas Sauvignon Blanc Dulce",
     "descripcion": "",
     "precio": 12000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Sauvignon Blanc",
     "bodega": "Siete Fincas",
     "zona": "Tupungato, Mendoza",
@@ -1398,6 +1412,7 @@
     "nombre": "Turbio Chardonnay",
     "descripcion": "",
     "precio": 19000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Chardonnay",
     "bodega": "Ravera Wines"
    },
@@ -1407,6 +1422,7 @@
     "nombre": "Turbio Sauvignon Blanc",
     "descripcion": "",
     "precio": 19000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Sauvignon Blanc",
     "bodega": "Ravera Wines",
     "zona": "Las Carreras, Tupungato, Mendoza",
@@ -1418,6 +1434,7 @@
     "nombre": "Tutu Semillón de Tinajas",
     "descripcion": "",
     "precio": 29500,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Semillón",
     "bodega": "Tutu Wines"
    },
@@ -1427,6 +1444,7 @@
     "nombre": "Zaha Semillon",
     "descripcion": "",
     "precio": 29000,
+    "foto": "img/botella-blancos.svg",
     "cepa": "Semillón",
     "bodega": "Mil Suelos",
     "zona": "La Consulta, Valle de Uco, Mendoza",
@@ -1438,6 +1456,7 @@
     "nombre": "Codorniú Zero Espumante",
     "descripcion": "",
     "precio": 25000,
+    "foto": "img/botella-espumantes.svg",
     "cepa": "Blend"
    },
    {
@@ -1446,6 +1465,7 @@
     "nombre": "Kung Fu Pet Nat",
     "descripcion": "",
     "precio": 42000,
+    "foto": "img/botella-espumantes.svg",
     "cepa": "Pet Nat"
    },
    {
@@ -1454,6 +1474,7 @@
     "nombre": "Las Perdices Partridge Espumante",
     "descripcion": "",
     "precio": 13000,
+    "foto": "img/botella-espumantes.svg",
     "cepa": "Blend"
    },
    {
@@ -1462,6 +1483,7 @@
     "nombre": "Manos Negras Espumante Brut Nature",
     "descripcion": "",
     "precio": 23000,
+    "foto": "img/botella-espumantes.svg",
     "cepa": "Brut Nature",
     "bodega": "Manos Negras"
    },
@@ -1471,6 +1493,7 @@
     "nombre": "Pannunzio Extra Brut Rosé",
     "descripcion": "",
     "precio": 13500,
+    "foto": "img/botella-espumantes.svg",
     "cepa": "Brut Nature",
     "bodega": "Pannunzio",
     "zona": "Barrancas, Maipú, Mendoza",
@@ -1482,6 +1505,7 @@
     "nombre": "Relator Espumante Pinot Noir",
     "descripcion": "",
     "precio": 29500,
+    "foto": "img/botella-espumantes.svg",
     "cepa": "Pinot Noir"
    },
    {
@@ -1490,6 +1514,7 @@
     "nombre": "Saint Felicien Brut Nature Ed Aniversario",
     "descripcion": "",
     "precio": 28250,
+    "foto": "img/botella-espumantes.svg",
     "cepa": "Brut Nature"
    },
    {
@@ -1498,6 +1523,7 @@
     "nombre": "Aguma Naranjo dulce",
     "descripcion": "",
     "precio": 10000,
+    "foto": "img/botella-naranjos.svg",
     "cepa": "Blend"
    },
    {
@@ -1506,6 +1532,7 @@
     "nombre": "Cara Sur Naranjo 2023",
     "descripcion": "",
     "precio": 29000,
+    "foto": "img/botella-naranjos.svg",
     "cepa": "Blend",
     "bodega": "Cara Sur",
     "zona": "Barreal, Valle de Calingasta, San Juan",
@@ -1517,6 +1544,7 @@
     "nombre": "Flora by Zaha Naranjo",
     "descripcion": "",
     "precio": 30600,
+    "foto": "img/botella-naranjos.svg",
     "cepa": "Blend"
    },
    {
@@ -1525,6 +1553,7 @@
     "nombre": "Pielihueso Naranjo",
     "descripcion": "",
     "precio": 36000,
+    "foto": "img/botella-naranjos.svg",
     "cepa": "Blend",
     "bodega": "Pielihueso"
    },
@@ -1534,6 +1563,7 @@
     "nombre": "Pielihueso Naranjo Ánfora",
     "descripcion": "",
     "precio": 42000,
+    "foto": "img/botella-naranjos.svg",
     "cepa": "Blend",
     "bodega": "Pielihueso"
    },
@@ -1543,6 +1573,7 @@
     "nombre": "Rincon de los Leones Chardonnay con pieles",
     "descripcion": "",
     "precio": 60000,
+    "foto": "img/botella-naranjos.svg",
     "cepa": "Chardonnay"
    },
    {
@@ -1551,6 +1582,7 @@
     "nombre": "Solito va Naranjo",
     "descripcion": "",
     "precio": 25000,
+    "foto": "img/botella-naranjos.svg",
     "cepa": "Blend"
    },
    {
@@ -1559,6 +1591,7 @@
     "nombre": "Arístides blend rosé",
     "descripcion": "",
     "precio": 14000,
+    "foto": "img/botella-rosados.svg",
     "cepa": "Blend",
     "bodega": "Arístides"
    },
@@ -1568,6 +1601,7 @@
     "nombre": "Matías Riccitelli Hey Rose 2024",
     "descripcion": "",
     "precio": 20000,
+    "foto": "img/botella-rosados.svg",
     "cepa": "Blend"
    },
    {
@@ -1576,6 +1610,7 @@
     "nombre": "Pielihueso Rosado Ánfora",
     "descripcion": "",
     "precio": 36000,
+    "foto": "img/botella-rosados.svg",
     "cepa": "Blend",
     "bodega": "Pielihueso"
    },
@@ -1585,6 +1620,7 @@
     "nombre": "Rosa di Rosso Bira Wines",
     "descripcion": "",
     "precio": 20000,
+    "foto": "img/botella-rosados.svg",
     "cepa": "Blend"
    },
    {
@@ -1593,6 +1629,7 @@
     "nombre": "Tinto Nero Rosé",
     "descripcion": "",
     "precio": 14000,
+    "foto": "img/botella-rosados.svg",
     "cepa": "Blend"
    },
    {
@@ -1601,6 +1638,7 @@
     "nombre": "Turbio Pinkgiovese",
     "descripcion": "",
     "precio": 19000,
+    "foto": "img/botella-rosados.svg",
     "cepa": "Sangiovese",
     "bodega": "Ravera Wines",
     "zona": "Maipú, Mendoza",
@@ -1612,6 +1650,7 @@
     "nombre": "Aguma Carmenere",
     "descripcion": "",
     "precio": 9000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Carmenere"
    },
    {
@@ -1620,6 +1659,7 @@
     "nombre": "Aguma Syrah",
     "descripcion": "",
     "precio": 7800,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Syrah"
    },
    {
@@ -1628,6 +1668,7 @@
     "nombre": "Angélica Zapata Malbec Alta",
     "descripcion": "",
     "precio": 42700,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -1636,6 +1677,7 @@
     "nombre": "Angelica Zapata Cabernet Sauvignon Alta",
     "descripcion": "",
     "precio": 34320,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Sauvignon"
    },
    {
@@ -1644,6 +1686,7 @@
     "nombre": "Antro Bonarda",
     "descripcion": "",
     "precio": 18000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Bonarda"
    },
    {
@@ -1652,6 +1695,7 @@
     "nombre": "Antro Pinot Noir",
     "descripcion": "",
     "precio": 18000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Pinot Noir"
    },
    {
@@ -1660,6 +1704,7 @@
     "nombre": "Arístides Bonarda",
     "descripcion": "",
     "precio": 14000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Bonarda",
     "bodega": "Arístides",
     "zona": "Maipú, Mendoza",
@@ -1671,6 +1716,7 @@
     "nombre": "Arístides Confidencial Cabernet Franc",
     "descripcion": "",
     "precio": 36800,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc",
     "bodega": "Arístides"
    },
@@ -1680,6 +1726,7 @@
     "nombre": "Arístides Desterrado",
     "descripcion": "",
     "precio": 25000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Arístides"
    },
@@ -1689,6 +1736,7 @@
     "nombre": "Arístides Malbec",
     "descripcion": "",
     "precio": 14000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "Arístides"
    },
@@ -1698,6 +1746,7 @@
     "nombre": "Arístides Partida Única Syrah",
     "descripcion": "",
     "precio": 32900,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Syrah",
     "bodega": "Arístides"
    },
@@ -1707,6 +1756,7 @@
     "nombre": "Bairoletto Pinot Noir",
     "descripcion": "",
     "precio": 12000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Pinot Noir",
     "bodega": "Bairoletto",
     "zona": "Luján de Cuyo, Mendoza",
@@ -1718,6 +1768,7 @@
     "nombre": "Caliche bonarda 2020",
     "descripcion": "",
     "precio": 20000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Bonarda"
    },
    {
@@ -1726,6 +1777,7 @@
     "nombre": "Callejón de las Brujas Carmenere",
     "descripcion": "",
     "precio": 11000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Carmenere"
    },
    {
@@ -1734,6 +1786,7 @@
     "nombre": "Callejón de las Brujas Malbec",
     "descripcion": "",
     "precio": 12000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -1742,6 +1795,7 @@
     "nombre": "Cara Sur Pérgolas Criolla Tinta",
     "descripcion": "",
     "precio": 22000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Criolla",
     "bodega": "Cara Sur"
    },
@@ -1751,6 +1805,7 @@
     "nombre": "Cara Sur Blend Tinto 2022",
     "descripcion": "",
     "precio": 28000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Cara Sur",
     "zona": "Barreal, Valle de Calingasta, San Juan",
@@ -1762,6 +1817,7 @@
     "nombre": "Casa Tano Cabernet Franc",
     "descripcion": "",
     "precio": 35500,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc"
    },
    {
@@ -1770,6 +1826,7 @@
     "nombre": "Confiado Serie 5 Malbec Séptima",
     "descripcion": "",
     "precio": 24000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -1778,6 +1835,7 @@
     "nombre": "Correntoso Pinot Noir",
     "descripcion": "",
     "precio": 25000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Pinot Noir"
    },
    {
@@ -1786,6 +1844,7 @@
     "nombre": "Credo Malbec El Peral 2021",
     "descripcion": "",
     "precio": 95000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -1794,6 +1853,7 @@
     "nombre": "Don Manuel Villafañe Gran Reserva Blend",
     "descripcion": "",
     "precio": 27000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Cielo y Tierra"
    },
@@ -1803,6 +1863,7 @@
     "nombre": "Don Bicho Cabernet Franc",
     "descripcion": "",
     "precio": 21000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc",
     "bodega": "Cielo y Tierra"
    },
@@ -1812,6 +1873,7 @@
     "nombre": "Don Juan Nahuel Malbec",
     "descripcion": "",
     "precio": 36400,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "Cielo y Tierra",
     "zona": "Lunlunta, Luján de Cuyo, Mendoza",
@@ -1823,6 +1885,7 @@
     "nombre": "Don Manuel Villafañe Cabernet Sauvignon Reserva",
     "descripcion": "",
     "precio": 14000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Sauvignon",
     "bodega": "Cielo y Tierra"
    },
@@ -1832,6 +1895,7 @@
     "nombre": "Don Manuel Villafañe Estate Franc + Verdot",
     "descripcion": "",
     "precio": 10000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Cielo y Tierra"
    },
@@ -1841,6 +1905,7 @@
     "nombre": "DV Catena Cabernet Malbec",
     "descripcion": "",
     "precio": 21000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -1849,6 +1914,7 @@
     "nombre": "Anko Flor de Cardon Cabernet Sauvignon",
     "descripcion": "",
     "precio": 16250,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Sauvignon",
     "bodega": "Estancia Los Cardones"
    },
@@ -1858,6 +1924,7 @@
     "nombre": "Tigerstone Garnacha 2023",
     "descripcion": "",
     "precio": 27000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Garnacha"
    },
    {
@@ -1866,6 +1933,7 @@
     "nombre": "El Bayeh Finca Ollantay Blend",
     "descripcion": "",
     "precio": 27000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -1874,6 +1942,7 @@
     "nombre": "El Enemigo Cabernet Franc",
     "descripcion": "",
     "precio": 29750,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc"
    },
    {
@@ -1882,6 +1951,7 @@
     "nombre": "Equilibrio Imperfecto blend de tintas",
     "descripcion": "",
     "precio": 28140,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -1890,6 +1960,7 @@
     "nombre": "Equilibrio Imperfecto Criolla",
     "descripcion": "",
     "precio": 34125,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Criolla"
    },
    {
@@ -1898,6 +1969,7 @@
     "nombre": "Gata Flora Malbec",
     "descripcion": "",
     "precio": 13000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -1906,6 +1978,7 @@
     "nombre": "Gouguenheim Estaciones Cabernet Sauvignon",
     "descripcion": "",
     "precio": 13000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Sauvignon"
    },
    {
@@ -1914,6 +1987,7 @@
     "nombre": "Gouguenheim Estaciones Malbec",
     "descripcion": "",
     "precio": 13000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -1922,6 +1996,7 @@
     "nombre": "Gran Enemigo Corte Cab Fran Malbec",
     "descripcion": "",
     "precio": 66200,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -1930,6 +2005,7 @@
     "nombre": "La Pesca del Día Chacho",
     "descripcion": "",
     "precio": 22000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -1938,6 +2014,7 @@
     "nombre": "La Puerta Syrah",
     "descripcion": "",
     "precio": 9000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Syrah"
    },
    {
@@ -1946,6 +2023,7 @@
     "nombre": "Malabarista cofermentado 1 malbec + petit verdot",
     "descripcion": "",
     "precio": 21000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Ravera Wines"
    },
@@ -1955,6 +2033,7 @@
     "nombre": "Malabarista Cofermentado 3 (malbec/ancellota)",
     "descripcion": "",
     "precio": 21000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Ravera Wines"
    },
@@ -1964,6 +2043,7 @@
     "nombre": "Manos Negras Artesano Malbec 2021",
     "descripcion": "",
     "precio": 29300,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "Manos Negras",
     "zona": "Paraje Altamira, Valle de Uco, Mendoza",
@@ -1975,6 +2055,7 @@
     "nombre": "Manos Negras Pinot Noir 2024",
     "descripcion": "",
     "precio": 17800,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Pinot Noir",
     "bodega": "Manos Negras"
    },
@@ -1984,6 +2065,7 @@
     "nombre": "Manos Negras Red Soil Pinot Noir 2023",
     "descripcion": "",
     "precio": 21000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Pinot Noir",
     "bodega": "Manos Negras"
    },
@@ -1993,6 +2075,7 @@
     "nombre": "Matias Michelini Punta Negra Pinot Noir 2023",
     "descripcion": "",
     "precio": 49500,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Pinot Noir"
    },
    {
@@ -2001,6 +2084,7 @@
     "nombre": "Miau sin sulfitos Malbec - 4 Gatos Locos",
     "descripcion": "",
     "precio": 21000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -2009,6 +2093,7 @@
     "nombre": "Nicoló Brunetto Bira Wines",
     "descripcion": "",
     "precio": 33000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -2017,6 +2102,7 @@
     "nombre": "Ovum Cabernet Franc",
     "descripcion": "",
     "precio": 29000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc",
     "bodega": "Terra Camiare"
    },
@@ -2026,6 +2112,7 @@
     "nombre": "Ovum reserva Malbec - Terra Camiare",
     "descripcion": "",
     "precio": 29000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "Terra Camiare"
    },
@@ -2035,6 +2122,7 @@
     "nombre": "Pannunzio Gran Reserva Malbec 2017",
     "descripcion": "",
     "precio": 30000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "Pannunzio"
    },
@@ -2044,6 +2132,7 @@
     "nombre": "Paso a Paso Bonarda Orgánico",
     "descripcion": "",
     "precio": 22400,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Bonarda"
    },
    {
@@ -2052,6 +2141,7 @@
     "nombre": "Pequeños Engaños 1 Clarete",
     "descripcion": "",
     "precio": 25200,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Clarete",
     "bodega": "El Bayeh"
    },
@@ -2061,6 +2151,7 @@
     "nombre": "Pequeños engaños 2 Malbec",
     "descripcion": "",
     "precio": 25200,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "El Bayeh"
    },
@@ -2070,6 +2161,7 @@
     "nombre": "Pequeños Engaños 3 Cabernet Franc",
     "descripcion": "",
     "precio": 25000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc",
     "bodega": "El Bayeh"
    },
@@ -2079,6 +2171,7 @@
     "nombre": "Pequeños Parceleros Criolla Maimará",
     "descripcion": "",
     "precio": 23000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Criolla",
     "bodega": "El Bayeh",
     "zona": "Purmamarca, Jujuy",
@@ -2090,6 +2183,7 @@
     "nombre": "Pielihueso Pinto Verdot",
     "descripcion": "",
     "precio": 38000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Petit Verdot",
     "bodega": "Pielihueso"
    },
@@ -2099,6 +2193,7 @@
     "nombre": "Pielihueso Tinto de los Sauces",
     "descripcion": "",
     "precio": 24000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Pielihueso"
    },
@@ -2108,6 +2203,7 @@
     "nombre": "Pleno Malbec + Cabernet Suav- Tempus Alba",
     "descripcion": "",
     "precio": 50000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Tempus Alba",
     "zona": "Maipú, Mendoza",
@@ -2119,6 +2215,7 @@
     "nombre": "Prisma Cabernet Suav - Penedo Borges",
     "descripcion": "",
     "precio": 23400,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Sauvignon"
    },
    {
@@ -2127,6 +2224,7 @@
     "nombre": "Puente Solanilla Blend",
     "descripcion": "",
     "precio": 12000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Puente Solanilla"
    },
@@ -2136,6 +2234,7 @@
     "nombre": "Puente Solanilla Bonarda",
     "descripcion": "",
     "precio": 12000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Bonarda",
     "bodega": "Puente Solanilla"
    },
@@ -2145,6 +2244,7 @@
     "nombre": "Puente Solanilla Cabernet Franc",
     "descripcion": "",
     "precio": 12000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc",
     "bodega": "Puente Solanilla"
    },
@@ -2154,6 +2254,7 @@
     "nombre": "Puente Solanilla Malbec",
     "descripcion": "",
     "precio": 12000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "Puente Solanilla",
     "zona": "Las Compuertas, Luján de Cuyo, Mendoza",
@@ -2165,6 +2266,7 @@
     "nombre": "Puente Solanilla Petit Verdot",
     "descripcion": "",
     "precio": 12000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Petit Verdot",
     "bodega": "Puente Solanilla"
    },
@@ -2174,6 +2276,7 @@
     "nombre": "Riccitelli Gualtallary Cabernet Franc",
     "descripcion": "",
     "precio": 51500,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc",
     "bodega": "Riccitelli Wines",
     "zona": "Gualtallary, Mendoza",
@@ -2185,6 +2288,7 @@
     "nombre": "Riccitelli Hey Malbec",
     "descripcion": "",
     "precio": 20000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "Riccitelli Wines"
    },
@@ -2194,6 +2298,7 @@
     "nombre": "Riccitelli The Apple Cabernet Sauvignon 2020",
     "descripcion": "",
     "precio": 31000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Sauvignon",
     "bodega": "Riccitelli Wines"
    },
@@ -2203,6 +2308,7 @@
     "nombre": "Riccitelli The Party Malbec",
     "descripcion": "",
     "precio": 30600,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "Riccitelli Wines"
    },
@@ -2212,6 +2318,7 @@
     "nombre": "Saint Felicien Cabernet Sauvignon",
     "descripcion": "",
     "precio": 14450,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Sauvignon"
    },
    {
@@ -2220,6 +2327,7 @@
     "nombre": "Señor Ravera Malbec",
     "descripcion": "",
     "precio": 31500,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -2228,6 +2336,7 @@
     "nombre": "Séptima Gran Reserva Blend",
     "descripcion": "",
     "precio": 45000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -2236,6 +2345,7 @@
     "nombre": "Séptima Obra Malbec",
     "descripcion": "",
     "precio": 21000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -2244,6 +2354,7 @@
     "nombre": "Séptima Obra Pinot Noir",
     "descripcion": "",
     "precio": 20000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Pinot Noir"
    },
    {
@@ -2252,6 +2363,7 @@
     "nombre": "Séptima Tierra Chacayes",
     "descripcion": "",
     "precio": 26000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -2260,6 +2372,7 @@
     "nombre": "Socavones Reserva - Cabernet Sauvignon + Cabernet Franc - Terra Camiare",
     "descripcion": "",
     "precio": 25000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Terra Camiare",
     "zona": "Colonia Caroya, Córdoba",
@@ -2271,6 +2384,7 @@
     "nombre": "Solito Va Cabernet Franc",
     "descripcion": "",
     "precio": 16500,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc"
    },
    {
@@ -2279,6 +2393,7 @@
     "nombre": "Tanito Bira Wines",
     "descripcion": "",
     "precio": 20000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -2287,6 +2402,7 @@
     "nombre": "Tano Bira Wines",
     "descripcion": "",
     "precio": 49000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -2295,6 +2411,7 @@
     "nombre": "Teho El Corte 2020",
     "descripcion": "",
     "precio": 40540,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -2303,6 +2420,7 @@
     "nombre": "Teho Malbec",
     "descripcion": "",
     "precio": 40540,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -2311,6 +2429,7 @@
     "nombre": "Tempus Malbec",
     "descripcion": "",
     "precio": 29700,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "4 Gatos Locos"
    },
@@ -2320,6 +2439,7 @@
     "nombre": "Terrasabbia Gran Malbec",
     "descripcion": "",
     "precio": 19500,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec"
    },
    {
@@ -2328,6 +2448,7 @@
     "nombre": "Terrasabbia Gran Tannat",
     "descripcion": "",
     "precio": 19500,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Tannat"
    },
    {
@@ -2336,6 +2457,7 @@
     "nombre": "Tinto de mi Pueblo Chacho",
     "descripcion": "",
     "precio": 24800,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend"
    },
    {
@@ -2344,6 +2466,7 @@
     "nombre": "Tinto Nero Sangiovese",
     "descripcion": "",
     "precio": 13100,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Sangiovese"
    },
    {
@@ -2352,6 +2475,7 @@
     "nombre": "Turbio Garnacha",
     "descripcion": "",
     "precio": 21000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Garnacha",
     "bodega": "Ravera Wines"
    },
@@ -2361,6 +2485,7 @@
     "nombre": "Tutu Cabernet Franc",
     "descripcion": "",
     "precio": 31500,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc",
     "bodega": "Tutu Wines",
     "zona": "Gualtallary, Mendoza",
@@ -2372,6 +2497,7 @@
     "nombre": "Tutu malbec",
     "descripcion": "",
     "precio": 28000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Malbec",
     "bodega": "Tutu Wines",
     "zona": "Gualtallary, Mendoza",
@@ -2383,6 +2509,7 @@
     "nombre": "Vertebrado Cabernet Franc Los Chocos",
     "descripcion": "",
     "precio": 40000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Franc",
     "bodega": "Viña Los Chocos",
     "zona": "Gualtallary, Valle de Uco, Mendoza",
@@ -2394,6 +2521,7 @@
     "nombre": "Vía Revolucionaria Criolla Grande Matías Michelini",
     "descripcion": "",
     "precio": 28000,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Criolla",
     "bodega": "Michelini Wines"
    },
@@ -2403,6 +2531,7 @@
     "nombre": "Zaha Cabernet Sauvignon 2020",
     "descripcion": "",
     "precio": 32700,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Cabernet Sauvignon",
     "bodega": "Mil Suelos",
     "zona": "Paraje Altamira, Valle de Uco, Mendoza",
@@ -2414,6 +2543,7 @@
     "nombre": "Zaha El Corte 2021",
     "descripcion": "",
     "precio": 32700,
+    "foto": "img/botella-tintos.svg",
     "cepa": "Blend",
     "bodega": "Mil Suelos"
    }

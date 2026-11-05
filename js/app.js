@@ -43,16 +43,16 @@ try { pintarCajon(JSON.parse(localStorage.getItem(`kit:${kit.config.id}:carrito`
 
 /* ---------- horarios y "hoy" ---------- */
 const DIAS = [['lun', 'Lunes'], ['mar', 'Martes'], ['mie', 'Miércoles'], ['jue', 'Jueves'], ['vie', 'Viernes'], ['sab', 'Sábado'], ['dom', 'Domingo']];
-const hs = (fr) => fr.map(([a, b]) => `${a} a ${b} hs`).join(' · ');
+const hs = (fr) => fr.map(([a, b]) => `${a} a ${b}`).join(' y ') + '\u00a0hs';
 const hoyKey = (() => { const n = kit.hoy(); const dow = new Date(n + 'T12:00:00').getDay(); return ['dom', 'lun', 'mar', 'mie', 'jue', 'vie', 'sab'][dow]; })();
 function pintarHorarios() {
   const H = kit.config.horarios;
   const ul = $('[data-horarios]');
-  if (ul) ul.innerHTML = DIAS.map(([k, n]) => `<li class="${k === hoyKey ? 'hoy' : ''}"><span>${n}</span><span>${H[k]?.length ? hs(H[k]) : 'Cerrado'}</span></li>`).join('');
+  if (ul) ul.innerHTML = DIAS.map(([k, n]) => `<li class="${k === hoyKey ? 'es-hoy' : ''}"><span>${n}</span><span>${H[k]?.length ? hs(H[k]) : 'Cerrado'}</span></li>`).join('');
   const est = kit.abierto();
   const hoyFr = H[hoyKey] || [];
   const e = $('[data-estado]');
-  if (e) e.innerHTML = est.abierto ? `<span class="punto"></span>Abierto hasta las ${est.cierra} hs` : `<span class="punto no"></span>${est.abre ? `Abrimos a las ${est.abre} hs` : 'Hoy está cerrado'}`;
+  if (e) e.innerHTML = est.abierto ? `<span class="punto"></span>Abierto · cierra <span class="nw">${est.cierra} hs</span>` : `<span class="punto no"></span>${est.abre ? `Abrimos a las <span class="nw">${est.abre} hs</span>` : 'Hoy está cerrado'}`;
   $$('[data-hoy-horario]').forEach((el) => { el.textContent = hoyFr.length ? `Hoy: ${hs(hoyFr)}` : 'Martes a sábados, mediodía y noche'; });
   const pie = $('[data-pie-horario]');
   if (pie) pie.innerHTML = 'Martes a sábados<br>' + esc(hs(H.mar || [])) + (JSON.stringify(H.vie) !== JSON.stringify(H.mar) ? `<br>Viernes y sábados hasta las ${esc((H.vie || []).slice(-1)[0]?.[1] || '')} hs` : '');
@@ -65,7 +65,9 @@ const qMomento = new URLSearchParams(location.search).get('momento');
 const kicker = $('[data-carta-kicker]');
 if (kicker) kicker.textContent = qMomento ? `La carta · modo ${MOMENTO === 'noche' ? 'noche' : 'mediodía'}` : `Son las ${reloj}: te mostramos la carta ${MOMENTO === 'noche' ? 'de la noche' : 'del mediodía'}`;
 
+let momentoActual = MOMENTO;
 function verMomento(m) {
+  momentoActual = m;
   $$('[data-momento-btn]').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.momentoBtn === m)));
   $$('.carta__pane').forEach((p) => { p.hidden = p.dataset.pane !== m; });
   const pane = $(`.carta__pane[data-pane="${m}"]`);
@@ -154,6 +156,7 @@ function ponerFoto(src, nom) {
 }
 function fotoSeccion(panel) {
   if (!panel) return;
+  if (panel.closest('.carta__pane')?.dataset.pane !== momentoActual) return;
   const it = $('.kit-item[data-photo]:not(.oculto)', panel);
   const cat = $('.kit-item', panel)?.dataset.cat;
   if (it) ponerFoto(it.dataset.photo, $('.it-nom', it)?.textContent);
@@ -278,7 +281,7 @@ function pintarFichaVino(id, abrir = true) {
   $('[data-vt-vacia]', vf).hidden = true; $('[data-vt-llena]', vf).hidden = false;
   const bot = $('[data-vt-bot]', vf); bot.className = `botella botella--grande t-${t[2]}`;
   $('.botella__precio', bot).textContent = precioCorto(v.precio); $('.botella__etq', bot).textContent = corto(v.nombre);
-  $('[data-vt-tipo]', vf).textContent = [t[3], v.cepa && v.cepa !== 'Blend' ? v.cepa : (v.cepa === 'Blend' ? 'Blend / corte' : '')].filter(Boolean).join(' · ');
+  $('[data-vt-tipo]', vf).textContent = [t[3], v.cepa && v.cepa !== 'Blend' ? v.cepa : (v.cepa === 'Blend' && ['vt-tintos', 'vt-blancos'].includes(v.categoria) ? 'Blend' : '')].filter(Boolean).join(' · ');
   $('[data-vt-nom]', vf).textContent = v.nombre;
   const filas = [];
   if (v.bodega) filas.push(['Bodega', esc(v.bodega)]);
@@ -334,6 +337,8 @@ $$('[data-filtro]').forEach((a) => a.addEventListener('click', () => setTipo(a.d
 /* ---------- catas ---------- */
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 const DSEM = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+const DCORTO = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+const fechaCorta = (f, h) => { const d = new Date(f + 'T12:00:00'); return `${DCORTO[d.getDay()]} ${d.getDate()} ${MESES[d.getMonth()].slice(0, 3)}${h ? ` · ${h} hs` : ''}`; };
 const fechaLarga = (f, h) => { const d = new Date(f + 'T12:00:00'); return `${DSEM[d.getDay()]} ${d.getDate()} de ${MESES[d.getMonth()]}${h ? ` · ${h} hs` : ''}`; };
 async function cupoDe(ev) {
   try { const ts = await kit.reservas.turnos(ev.fecha, 1); const t = ts.find((x) => x.hora === ev.hora); if (t) return { libres: t.libres, cap: t.capacidad || ev.cupo }; } catch (_) { /* sin dato */ }
@@ -363,14 +368,14 @@ async function pintarCatas() {
   const sig = $('[data-catas-sig]');
   const minis = await Promise.all(resto.slice(0, 3).map(async (e, i) => {
     const cc = await cupoDe(e);
-    return `<article class="cata-mini ent visto" style="--d:${i}"><span class="cata-mini__f">${esc(fechaLarga(e.fecha, e.hora))}</span><span class="cata-mini__n">${esc(e.nombre)}</span>
+    return `<article class="cata-mini ent visto" style="--d:${i}"><span class="cata-mini__f">${esc(fechaCorta(e.fecha, e.hora))}</span><span class="cata-mini__n">${esc(e.nombre)}</span>
       <div class="cata-mini__pie"><span class="mono" style="font-size:12px;color:#F4C9DA">${cc.libres} lugares</span><button type="button" data-anotar="${esc(e.id)}">Anotarme</button></div></article>`;
   }));
   sig.innerHTML = minis.join('');
   $$('[data-anotar]', sig).forEach((b) => { const e = resto.find((x) => x.id === b.dataset.anotar); b.onclick = () => kit.reservas.abrir({ fecha: e.fecha, hora: e.hora, personas: 2 }); });
   const hn = $('[data-cata-nombre]'), hf = $('[data-cata-fecha]');
   if (hn) hn.textContent = p.nombre;
-  if (hf) hf.textContent = `${fechaLarga(p.fecha, p.hora)} · quedan ${c.libres}`;
+  if (hf) hf.textContent = `${fechaCorta(p.fecha, p.hora)} · quedan ${c.libres} lugares`;
 }
 document.addEventListener('kit:eventos', pintarCatas);
 
